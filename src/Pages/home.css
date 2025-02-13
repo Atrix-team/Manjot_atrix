@@ -6,5 +6,12 @@
 
 .moveWithMouse {
     transition: transform 0.2s ease-out;
-    transition-delay: 1s;
+    /* transition-delay: 1s; */
+    /* animation-delay: 5s; */
+}
+.about-section{
+    background-image: url('https://atrixitsolutions.com/wp-content/uploads/2024/07/20410-1280x732.jpg');
+    background-size: cover;
+    background-position: center;
+
 }

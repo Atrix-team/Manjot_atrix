@@ -30,15 +30,39 @@
 
 
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.css';
 import '../CSS/tying.css';
 import ParticleEffect from '../Components/ParticleEffect';
 import TypewriterEffect from '../Components/TyingWriter';
+import LogoSlider from '../Components/marqueelogo/LogoSlider';
+import Button from '../Components/Button';
+import OurServices from '../Components/OurServices';
 
 
 const Home = () => {
+    useEffect(() => {
+        const elements = document.querySelectorAll('.moveWithMouse');
 
+        const moveElements = (e) => {
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+
+                const moveX = (mouseX - (rect.left + rect.width / 100)) / 160;
+                const moveY = (mouseY - (rect.top + rect.height / 100)) / 160;
+
+                element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        };
+
+        window.addEventListener('mousemove', moveElements);
+
+        return () => {
+            window.removeEventListener('mousemove', moveElements);
+        };
+    }, []);
 
     return (
         <>
@@ -51,8 +75,8 @@ const Home = () => {
                         <h1 className=" text-(--whitelight) mt-5 text-6xl md:text-8xl lg:text-9xl  ">
                             <div className='relative inline-block'>
                                 <div className='font-bold tracking-wider '>We deliver</div>
-                                <div className="absolute bottom-[4%] -right-[20%] text-center z-20 animateFromTop moveWithMouse ">
-                                    <p className='bg-(--white) text-(--black) border  font-body border-transparent rounded-4xl px-8 py-1 text-2xl -rotate-7 font-bold'>
+                                <div className="absolute bottom-[4%] -right-[20%] text-center z-20 animateFromTop   ">
+                                    <p className='bg-(--white) text-(--black) border  font-body border-transparent rounded-4xl px-8 py-1 text-2xl -rotate-7 font-bold moveWithMouse'>
                                         Marketing
                                     </p>
                                 </div>
@@ -61,8 +85,8 @@ const Home = () => {
                             <div className='flex items-center justify-center text-center'>
                                 <div className='relative inline-block'>
                                     <div className='font-bold  tracking-wider'>personal  </div>
-                                    <div className="absolute top-[0%] left-[0%]  text-center z-20 animateFromTop moveWithMouse ">
-                                        <p className='bg-(--green) text-(--black) font-body border border-transparent rounded-4xl px-8 py-1 text-2xl rotate-5 font-bold'>
+                                    <div className="absolute top-[0%] left-[0%]  text-center z-20 animateFromTop  ">
+                                        <p className='bg-(--green) text-(--black) font-body border border-transparent rounded-4xl px-8 py-1 text-2xl rotate-5 font-bold moveWithMouse'>
                                             Web Development
                                         </p>
                                     </div>
@@ -77,11 +101,11 @@ const Home = () => {
                                     />
                                 </div>
                             </div>
-                            
+
                             <div className='relative inline-block'>
                                 <div className='font-bold tracking-wider'> solutions</div>
-                                <div className="absolute bottom-[10%] -left-[30%] ] text-center z-20 animateFromTop moveWithMouse">
-                                    <p className='bg-(--blue) text-(--black) border font-body border-transparent rounded-4xl px-8 py-1 text-2xl rotate-12 font-bold'>
+                                <div className="absolute bottom-[10%] -left-[30%] ] text-center z-20 animateFromTop ">
+                                    <p className='bg-(--blue) text-(--black) border font-body border-transparent rounded-4xl px-8 py-1 text-2xl rotate-12 font-bold moveWithMouse'>
                                         Brand Identity
                                     </p>
                                 </div>
@@ -96,6 +120,38 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            <div className='bg-(--darkblack) py-14'>
+                <LogoSlider />
+
+
+
+                <div className='bg-(--darkblack)  p-0  '>
+
+
+                    <h1 className=' font-bold px-80 top-14  relative text-9xl text-transparent' style={{ WebkitTextStroke: "1px white" }}>About us</h1>
+
+                    <div className=' flex items-center   '>
+                        <img src='https://atrixitsolutions.com/wp-content/uploads/2024/07/20410-1280x732.jpg' className='ml-20 h-full max-h-[560px] ' />
+                        <div className='text-(--white) -left-16 relative w-full max-w-[560px] '>
+                            <p className='text-xl font-semibold text-(--gray) mb-2'>  Our Vision</p>
+                            <h5 className='text-5xl font-bold  mb-5'>Unlock Revenue Growth for Your Business</h5>
+                            <h6 className='text-2xl font-semibold  mb-10'>Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs perfectly.</h6>
+                            <div className='border  text-(--gray) mb-5'></div>
+                            <p className='text-md text-(--gray)   mb-4'>Through our years of experience, we’ve also learned that while each channel has its own set of advantages, they all work best when strategically paired with other channels. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
+                           <Button  mybtn={"Learn More"}/>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <OurServices />
+
+
+
+
         </>
     );
 };

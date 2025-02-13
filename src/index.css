@@ -278,12 +278,15 @@
 :root{
   --whitelight:white;
   --white:#D8D8D8;
+  --gray: #888888!important;
   --blue:#00A2DC;
   --green: #00A657;
   --black: #262626;
+  --darkblack:#181818;
   --navbarUlbgcolor: #444343;
   --headingfont: 'Neue Leiden', sans-serif;
   --bodyfont: 'Remark', sans-serif;
+
 }
 body{
   font-size: 16px;

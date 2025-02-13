@@ -1,11 +1,12 @@
 import React from 'react';
 import { RxArrowTopRight } from "react-icons/rx";
 import { Link, useLocation } from 'react-router-dom';
+import Button from './Button';
 
 const Navbar = () => {
   const location = useLocation();
   return (
-    <div className="absolute top-0 left-0 w-full  z-10 p-4">
+    <header className="absolute top-0 left-0 w-full  z-10 p-4">
       <div className="flex justify-between items-center text-center px-10">
        
         <div>
@@ -34,12 +35,10 @@ const Navbar = () => {
 
       
         <div> 
-          <button className="bg-(--navbarUlbgcolor)  font-bold text-(--white) px-4 py-2 rounded-lg hover:bg-(--green) cursor-pointer  flex items-center gap-2">
-            Let's Talk <span className=''><RxArrowTopRight className='h-'/></span>
-          </button>
+        <Button  mybtn={"Let's Talk"}/>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
