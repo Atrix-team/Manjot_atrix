@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 @import "tailwindcss";
 
@@ -286,15 +287,17 @@
   --navbarUlbgcolor: #444343;
   --headingfont: 'Neue Leiden', sans-serif;
   --bodyfont: 'Remark', sans-serif;
+ --manropefont:"Manrope", serif;
+}
 
-}
-body{
+/* body{
   font-size: 16px;
-}
+} */
 body, input, textarea, html{
-  font-family: var(--bodyfont);
+  /* font-family: var(--bodyfont); */
+  font-family:var(--manropefont);
 }
-h1,h2,h3,h4{
+h1,h2,h3,h4,h5{
   font-family: var(--headingfont);
 }
 .bg-gr{
