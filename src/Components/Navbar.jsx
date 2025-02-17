@@ -20,16 +20,16 @@ const Navbar = () => {
         <div>
           <ul className="flex space-x-8 text-lg  font-bold text-(--white)">
             <Link to='/'>
-            <li className={`hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer ${location.pathname === '/' ? 'text-(--blue) bg-(--navbarUlbgcolor) px-3 rounded-md' : ''}`}>Home</li>
+            <li className={`hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer ${location.pathname === '/' ? 'text-(--blue) bg-(--navbarUlbgcolor) px-3 py-1 rounded-md' : ''}`}>Home</li>
             </Link>
             <Link to="/about">
-            <li className={`hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer ${location.pathname === '/about' ? 'text-(--blue) bg-(--navbarUlbgcolor) px-3 rounded-md' : ''}`}>About Us </li>
+            <li className={`hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 py-1 hover:rounded-md cursor-pointer ${location.pathname === '/about' ? 'text-(--blue) bg-(--navbarUlbgcolor) px-3 py-1 rounded-md' : ''}`}>About Us </li>
             </Link>
-            <li className=" hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer">Create Blog</li>
-            <li className="hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer">Our Services</li>
+            <li className=" hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 py-1 hover:rounded-md cursor-pointer">Create Blog</li>
+            <li className="hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 py-1 hover:rounded-md cursor-pointer">Our Services</li>
            
-            <li className="hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer">FAQ’s</li>
-            <li className="hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 hover:rounded-md cursor-pointer">Contact Us</li>
+            <li className="hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 py-1 hover:rounded-md cursor-pointer">FAQ’s</li>
+            <li className="hover:text-(--blue) hover:bg-(--navbarUlbgcolor) px-3 py-1 hover:rounded-md cursor-pointer">Contact Us</li>
           </ul>
         </div>
 

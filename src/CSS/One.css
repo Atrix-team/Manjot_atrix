@@ -14,3 +14,39 @@
     transition: opacity 0.1s ease-in, transform 0.2s ease-in-out;
     transform: scale(1.05);
   }
+
+
+
+
+  .inner-section {
+    position: relative;
+    width: 282px;
+    height: 282px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent; 
+}
+
+.inner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--gray) 0%,
+        var(--gray) var(--progress),
+        transparent var(--progress),
+        transparent 100%
+    );
+    mask: radial-gradient(
+        circle,
+        transparent 67%,
+        white 50%
+    );
+    z-index: -1; 
+}
