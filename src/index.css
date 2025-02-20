@@ -299,6 +299,7 @@ body, input, textarea, html{
 }
 h1,h2,h3,h4,h5{
   font-family: var(--headingfont);
+  letter-spacing: 2px;
 }
 .bg-gr{
   background-image: linear-gradient(to left, var(--green), var(--blue));

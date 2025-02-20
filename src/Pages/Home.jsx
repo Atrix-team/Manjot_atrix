@@ -40,6 +40,9 @@ import Button from '../Components/Button';
 import OurServices from '../Components/OurServices';
 import CountSection from '../Components/CountSection';
 import OurSolution from '../Components/OurSolution';
+import OurPortfolio from '../Components/OurPortfolio';
+import Technology from '../Components/Technology';
+import LetterMarquee from '../Components/marqueelogo/letterMarquee';
 
 
 const Home = () => {
@@ -77,7 +80,7 @@ const Home = () => {
                         <h1 className=" text-(--whitelight) mt-5 text-6xl md:text-8xl lg:text-9xl  ">
                             <div className='relative inline-block'>
                                 <div className='font-bold tracking-wider '>We deliver</div>
-                                <div className="absolute bottom-[4%] -right-[20%] text-center z-20 animateFromTop   ">
+                                <div className="absolute bottom-[4%] -right-[20%] text-center z-20 animateFromTop   tracking-normal">
                                     <p className='bg-(--white) text-(--black) border  font-body border-transparent rounded-4xl px-8 py-1 text-2xl -rotate-7 font-bold moveWithMouse'>
                                         Marketing
                                     </p>
@@ -87,7 +90,7 @@ const Home = () => {
                             <div className='flex items-center justify-center text-center'>
                                 <div className='relative inline-block'>
                                     <div className='font-bold  tracking-wider'>personal  </div>
-                                    <div className="absolute top-[0%] left-[0%]  text-center z-20 animateFromTop  ">
+                                    <div className="absolute top-[0%] left-[0%]  text-center z-20 animateFromTop tracking-normal ">
                                         <p className='bg-(--green) text-(--black) font-body border border-transparent rounded-4xl px-8 py-1 text-2xl rotate-5 font-bold moveWithMouse'>
                                             Web Development
                                         </p>
@@ -106,7 +109,7 @@ const Home = () => {
 
                             <div className='relative inline-block'>
                                 <div className='font-bold tracking-wider'> solutions</div>
-                                <div className="absolute bottom-[10%] -left-[30%] ] text-center z-20 animateFromTop ">
+                                <div className="absolute bottom-[10%] -left-[30%] ] text-center z-20 animateFromTop tracking-normal ">
                                     <p className='bg-(--blue) text-(--black) border font-body border-transparent rounded-4xl px-8 py-1 text-2xl rotate-12 font-bold moveWithMouse'>
                                         Brand Identity
                                     </p>
@@ -130,11 +133,11 @@ const Home = () => {
                     <h1 className=' font-bold flex justify-center right-60 top-14  relative text-9xl text-transparent' style={{ WebkitTextStroke: "1px white" }}>About us</h1>
                     <div className=' flex items-center  justify-center '>
                         <img src='https://atrixitsolutions.com/wp-content/uploads/2024/07/20410-1280x732.jpg' className=' h-full max-h-[560px] ' />
-                        <div className='text-(--white) -left-16   relative w-full max-w-[560px] '>
+                        <div className='text-(--white) -left-16   relative w-full max-w-[565px] '>
                             <p className='text-xl font-semibold text-(--gray) mb-2'>  Our Vision</p>
                             <h5 className='text-5xl font-bold  mb-5'>Unlock Revenue Growth for Your Business</h5>
                             <h6 className='text-2xl font-semibold  mb-10'>Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs perfectly.</h6>
-                            <div className='border  text-(--gray) mb-5'></div>
+                            <div className='border  border-(--gray) mb-5'></div>
                             <p className='text-md text-(--gray)   mb-4'>Through our years of experience, we’ve also learned that while each channel has its own set of advantages, they all work best when strategically paired with other channels. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
                             <Button mybtn={"Learn More"} />
                         </div>
@@ -155,6 +158,17 @@ const Home = () => {
                 <OurSolution />
             </div>
 
+            <div>
+                <OurPortfolio />
+            </div>
+
+            <div>
+                <Technology />
+            </div>
+
+            <div>
+                <LetterMarquee />
+            </div>
         </>
     );
 };

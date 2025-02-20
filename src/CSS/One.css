@@ -27,26 +27,59 @@
     align-items: center;
     justify-content: center;
     background: transparent; 
+    transition: all 0.5s ease-in-out;
+   
+    
 }
 
 .inner-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 101%;
+    height: 101%;
     border-radius: 50%;
-    background: conic-gradient(
-        var(--gray) 0%,
+    
+    transition: --progress 3s ease-in-out;
+    transition: --background 3s ease-in;
+
+    background: conic-gradient(   var(--gray) var(--progress), transparent 0%);
+    /* background: conic-gradient(
+        var(--gray) ,
         var(--gray) var(--progress),
         transparent var(--progress),
-        transparent 100%
-    );
+        transparent 
+    ); */
     mask: radial-gradient(
-        circle,
+    
         transparent 67%,
-        white 50%
+        var(--gray) 68%
     );
     z-index: -1; 
+    transform: translate(-50%, -50%)
 }
+
+
+
+/* Custom CSS for gradients */
+.custom-gradient {
+    background: linear-gradient(var(--black), var(--black)) padding-box,
+                linear-gradient(45deg, var(--blue) 20%, var(--green) 80%) border-box;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    color: var(--whitelight);
+    transition: background 0.5s ease-in-out;
+  }
+  
+  :hover.custom-gradient {
+    background: linear-gradient(45deg, var(--blue) 20%, var(--green) 80%) padding-box,
+                linear-gradient(45deg, var(--blue) 20%, var(--green) 80%) border-box;
+    color: var(--whitelight);
+    transition: background 0.5s ease-in-out ;
+  }
+
+
+
+
+
