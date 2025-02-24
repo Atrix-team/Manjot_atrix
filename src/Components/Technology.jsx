@@ -5,7 +5,7 @@ const Technology = () => {
 
     return (
         <div className="bg-(--darkblack) text-(--whitelight) py-32 relative overflow-hidden">
-            
+             <div className='container mx-auto  '>
             <div className="flex justify-center gap-10">
                 <div className='font-extrabold'>
                     <h2 className="text-5xl font-bold">We Used Advance <br />TECHNOLOGY</h2>
@@ -24,6 +24,7 @@ const Technology = () => {
             </div>
 
            <TechnologySecPart />
+        </div>
         </div>
     );
 };

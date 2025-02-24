@@ -1,4 +1,4 @@
-.service-item:last-child {
+/* .service-item:last-child {
     border-bottom: 1px solid var(--gray);
     
   }
@@ -8,7 +8,7 @@
        -webkit-text-stroke: 1px;
        opacity: .6;
        content: "01 ";
-   }
+   } */
    .active-img {
     opacity: 1;
     transition: opacity 0.1s ease-in, transform 0.2s ease-in-out;

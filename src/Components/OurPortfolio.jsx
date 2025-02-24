@@ -4,32 +4,37 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import project1 from "../assets/PortfolioImage/project1.jpeg";
+import project2 from "../assets/PortfolioImage/project2.jpeg";
+import project3 from "../assets/PortfolioImage/project3.jpeg";
+import project4 from "../assets/PortfolioImage/project4.jpeg";
+
 
 
 const OurPortfolio = () => {
     const Protfolio = [
         {
-            img: "https://atrixitsolutions.com/wp-content/uploads/2024/08/project4.jpeg",
+            img: project1,
             title: "Cartoon Bank",
             work: ["3d Animation", "Graphic Design"]
         },
         {
-            img: "https://atrixitsolutions.com/wp-content/uploads/2024/08/project3.jpeg",
+            img: project2,
             title: "World’s Relays",
             work: ["UI & UX Design"]
         },
         {
-            img: "https://atrixitsolutions.com/wp-content/uploads/2024/08/project2.jpeg",
+            img: project3,
             title: "Stickers Pack",
             work: ["UI & UX Design", "Graphic Design"]
         },
         {
-            img: "https://atrixitsolutions.com/wp-content/uploads/2024/08/project1.jpeg",
+            img: project4,
             title: "Diseño Gráfico",
             work: ["Development", "Software", "Web Design"]
         },
         {
-            img: "https://atrixitsolutions.com/wp-content/uploads/2024/08/project3.jpeg",
+            img: project3,
             title: "World's Relays",
             work: ["UI & UX Design"]
         },
@@ -41,67 +46,67 @@ const OurPortfolio = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        // initialSlide: 0,
-              autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-    //   cssEase: "linear",
-      arrows:false,
+
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+
+        arrows: false,
         responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
         ]
-      };
+    };
     return (
         <div className="bg-(--darkblack) text-(--whitelight) py-32 relative overflow-hidden">
-            <div className='w-full max-w-[1400px] mx-auto'>
-            <div className="flex justify-center  gap-10">
-                <div className=' font-extrabold'>
-                    <p className='text-gray text-end'>OUR PORTFOLIO</p>
-                    <h2 className="text-6xl font-bold ">Our Work</h2>
-                </div>
-
-                <div className='w-full max-w-[550px] mt-14'>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 65">
-                        <path fill="#2f2f2f" d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM475 3L475.255 3.42984L476.82 2.5H475V3ZM438.668 65L441.872 60.197L436.111 59.8239L438.668 65ZM3 3.5H475V2.5H3V3.5ZM474.745 2.57016C459.928 11.3742 441.341 27.8789 438.461 60.47L439.457 60.5581C442.3 28.3895 460.613 12.1303 475.255 3.42984L474.745 2.57016Z"></path>
-                    </svg>
-                </div>
-                <div className='mt-1  text-end'>
-                    <div className=' flex justify-end'>
-                        <Button className="" mybtn={"View All Portfolio"} />
+             <div className='container mx-auto  '>
+                <div className="flex justify-center  gap-10">
+                    <div className=' font-extrabold'>
+                        <p className='text-gray text-end'>OUR PORTFOLIO</p>
+                        <h2 className="text-6xl font-bold ">Our Work</h2>
                     </div>
-                    <p className='w-86 text-gray font-bold mt-4'>
-                        Offer a wide range of services to help businesses establish and enhance their online presence.
-                    </p>
-                </div>
-            </div>
 
-      
-            <div className="p-8 mt-20 "  >
-            <style>
-                {`
+                    <div className='w-full max-w-[550px] mt-14'>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 65">
+                            <path fill="#2f2f2f" d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM475 3L475.255 3.42984L476.82 2.5H475V3ZM438.668 65L441.872 60.197L436.111 59.8239L438.668 65ZM3 3.5H475V2.5H3V3.5ZM474.745 2.57016C459.928 11.3742 441.341 27.8789 438.461 60.47L439.457 60.5581C442.3 28.3895 460.613 12.1303 475.255 3.42984L474.745 2.57016Z"></path>
+                        </svg>
+                    </div>
+                    <div className='mt-1  text-end'>
+                        <div className=' flex justify-end'>
+                            <Button className="" mybtn={"View All Portfolio"} />
+                        </div>
+                        <p className='w-86 text-gray font-bold mt-4'>
+                            Offer a wide range of services to help businesses establish and enhance their online presence.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div className="p-8 mt-20 "  >
+                    <style>
+                        {`
                 .slick-arrow {
                 display:none!important;
                 }
@@ -139,33 +144,33 @@ const OurPortfolio = () => {
                 .slick-dots li {
                 margin: 0 9px;}
                 `}
-            </style>
-                <Slider {...settings} className=''>
-                    {Protfolio.map((item, index) => (
-                        <div key={index} className="px-2  ">
-                            <div className='border border-(--black)  rounded-2xl'>
-                            <div className="bg-(--black) pt-10 px-10   rounded-t-lg ">
-                                <ul className="flex flex-wrap gap-2">
-                                    {item.work.map((workItem, idx) => (
-                                        <li key={idx} className="bg-(--darkblack)   rounded-full px-4 py-1 text-sm hover:bg-(--green)">
-                                            {workItem}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className='relative'>
-                                <img src={item.img} alt={item.title} className="w-full h-80 object-cover mt-5" />
-                                <button className='bg-(--black)  rounded-full px-2 py-2 text-4xl absolute -bottom-5 right-10 cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
+                    </style>
+                    <Slider {...settings} className=''>
+                        {Protfolio.map((item, index) => (
+                            <div key={index} className="px-2  ">
+                                <div className='border border-(--black)  rounded-2xl'>
+                                    <div className="bg-(--black) pt-10 px-10   rounded-t-lg ">
+                                        <ul className="flex flex-wrap gap-2">
+                                            {item.work.map((workItem, idx) => (
+                                                <li key={idx} className="bg-(--darkblack)   rounded-full px-4 py-1 text-sm hover:bg-(--green)">
+                                                    {workItem}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <div className='relative'>
+                                            <img src={item.img} alt={item.title} className="w-full h-80 object-cover mt-5" />
+                                            <button className='bg-(--black)  rounded-full px-2 py-2 text-4xl absolute -bottom-5 right-10 cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
+                                        </div>
+                                    </div>
+                                    <div className="px-12 py-8  ">
+                                        <h3 className="text-2xl font-bold  mb-2 ">{item.title}</h3>
+                                    </div>
                                 </div>
-                                </div>
-                                <div className="px-12 py-8  ">
-                                    <h3 className="text-2xl font-bold  mb-2 ">{item.title}</h3>
-                                </div>
-                           </div>
-                        </div>
-                    ))}
-                </Slider>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
-        </div>
         </div>
     );
 };

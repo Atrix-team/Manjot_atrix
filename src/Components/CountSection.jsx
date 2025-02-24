@@ -15,7 +15,7 @@ const CountSection = () => {
       text: 'awards for digital innovation',
       bgClass: 'bg-(--black)', 
       colorclass:'text-(--white)',
-      width:"w-40"
+      width:"w-48"
 
     },
     {
@@ -52,14 +52,16 @@ const CountSection = () => {
         height: '623px',
       }}
     >
-      <div className=" flex h-full items-end gap-16 px-70">
+    <div className=' mx-auto  container items-end'>
+
+      <div className=" flex  items-end gap-16 px-70">
        
       
           {counts.map((item, index) => (
           
             <div
               key={index}
-              className={`text-center items-start flex justify-items-start  px-6 py-8 mb-4  w-70 h-40 ${item.bgClass} ${item.colorclass} `}
+              className={`text-center items-start flex md:justify-items-start  px-6 py-8 mb-4  md:w-70 h-40 ${item.bgClass} ${item.colorclass} `}
             >
                 <div className={` items-start text-start ${item.width}`}>
               <span className="text-4xl font-bold">{item.current}+ </span>
@@ -70,6 +72,7 @@ const CountSection = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
 
   );

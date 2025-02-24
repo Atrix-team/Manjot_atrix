@@ -47,3 +47,7 @@
     object-fit: contain;
     filter: grayscale(100%);
 }
+
+.marquee-2 .marquee-img img:hover{
+    filter: none;
+}

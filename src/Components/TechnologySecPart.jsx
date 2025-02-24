@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import reacticons from "../assets/TechnologyImage/react.svg"
+import nodeicons from "../assets/TechnologyImage/node-js.svg"
 
 const TechnologySecPart = () => {
     const [activeSection, setActiveSection] = useState('frontend');
@@ -68,40 +70,40 @@ export default TechnologySecPart;
 // Frontend data
 const frontend = [
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },   {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },   {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },   {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/react.svg",
+        icons: reacticons,
         TechnologyName: "React JS"
     },
 ];

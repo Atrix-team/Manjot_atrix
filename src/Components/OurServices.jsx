@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect } from "react";
 import Service1 from "../assets/ServicesImage/service-1.png";
 import Service2 from '../assets/ServicesImage/service-2.png';
@@ -9,11 +6,10 @@ import Service4 from "../assets/ServicesImage/service-4.png";
 import Service5 from "../assets/ServicesImage/service-5.png";
 import Service6 from "../assets/ServicesImage/service-6.png";
 import Service7 from "../assets/ServicesImage/service-7.png";
-import "../CSS/one.css"
+import "../CSS/one.css";
 import { FaUser } from "react-icons/fa";
 
 const services = [
-
   {
     id: 1,
     image: Service1,
@@ -106,29 +102,31 @@ const OurServices = () => {
   }, []);
 
   return (
-    <div className=" bg-(--darkblack) text-(--whitelight) py-40">
-      <div className="max-w-[1400px] mx-auto px-10">
-        <h2 className="text-center text-5xl font-bold">Our Services</h2>
-        <div className="flex ">
+    <div className="bg-(--darkblack) text-(--whitelight) py-20 md:py-40">
 
-          <div className="w-1/2 pr-40  mt-24 ">
+      <div className="container mx-auto  ">
+        
+        <h2 className="text-center text-3xl md:text-5xl font-bold">Our Services</h2>
+        
+        <div className="flex flex-col md:flex-row   my-4 -mx-4 justify-center ">
+
+          {/* Services List (Left Side) */}
+          <div className="w-full md:w-1/2  ">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="service-card opacity-30 transition-opacity duration-300 mt-60 first:mt-0"
+                className="service-card opacity-30 transition-opacity duration-300 mt-20 md:mt-60 first:mt-0 "
               >
-                <div className="flex justify-start items-center gap-3">
+                <div className="flex  items-center gap-3 ">
                   <div className="w-[40px] h-[40px] bg-gradient-to-r from-(--blue) to-(--green) rounded-full translate-y-2 mr-1">
-                    <span className="inline-block ml-2 mt-2   text-2xl"> {service.icon}</span>
+                    <span className="inline-block ml-2 mt-2 text-2xl">{service.icon}</span>
                   </div>
-                  <h3 className="text-3xl font-bold mt-4 ">
-                    {service.title}
-                  </h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mt-4">{service.title}</h3>
                 </div>
-                <p className="text-md mt-9 text-(--white) leading-8">
+                <p className="text-md mt-6 md:mt-9 text-(--white) leading-7 md:leading-8">
                   {service.description}
                 </p>
-                <div className="flex flex-wrap mt-10">
+                <div className="flex flex-wrap mt-6 md:mt-10">
                   {[
                     "Branding",
                     "Logo Design",
@@ -138,32 +136,32 @@ const OurServices = () => {
                     "Advertisement",
                   ].map((btn, i) => (
                     <div
-                      className="custom-gradient rounded-full px-6 py-2 mt-2.5 mr-2.5 "
-                     
-                
+                      key={i}
+                      className="custom-gradient rounded-full px-4 py-1 md:px-6 md:py-2 mt-2 mr-2"
+
                     >
                       {btn}
                     </div>
                   ))}
                 </div>
-
               </div>
             ))}
           </div>
 
-
+          {/* Sticky Images (Right Side) */}
           <div className="w-1/2  relative  ">
-            <div className="sticky top-96 h-96 pl-36">
+            <div className="sticky top-96">
               {services.map((serviceimg, index) => (
                 <img
                   key={serviceimg.id}
                   src={serviceimg.image}
                   alt={serviceimg.title}
-                  className="serviceImg absolute left- max-w-[100%] h-auto opacity-0 scale-70 transition-all duration-200"
+               className="serviceImg absolute z-10 left-1/4   max-w-[90%] md:max-w-[100%] h-auto opacity-0 scale-70 transition-all duration-200"
                 />
               ))}
             </div>
           </div>
+     
         </div>
       </div>
     </div>
@@ -174,3 +172,15 @@ export default OurServices;
 
 
 
+{/* <div className="w-full md:w-1/2 relative mt-10 md:mt-0">
+<div className="sticky top-20 md:top-96 h-96">
+  {services.map((serviceimg, index) => (
+    <img
+      key={serviceimg.id}
+      src={serviceimg.image}
+      alt={serviceimg.title}
+      className="serviceImg absolute z-10 left-1/2 md:left-96 transform -translate-x-1/2 max-w-[90%] md:max-w-[100%] h-auto opacity-0 scale-70 transition-all duration-200"
+    />
+  ))}
+</div>
+</div> */}
