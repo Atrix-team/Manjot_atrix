@@ -6,16 +6,16 @@ import Logo from "../assets/ais-logo.png"
 
 const Footer = () => {
     return (
-        <div className='bg-(--darkblack) text-(--white)  mt-28'>
+        <div className='bg-(--darkblack) text-(--white)  mt-18'>
 
             <div className='container mx-auto max-w-[1700px] '>
-                <div className=' flex flex-col md:flex-row justify-between  gap-1  '>
+                <div className=' flex flex-col lg:flex-row justify-between  gap-1 px-5  '>
 
-                    <div>
+                    <div className='mt-10'>
                         <img src={Logo} className='w-30 ' />
                         <div className='mt-5'>
                             <h5 className='text-(--blue)  text-xl font-bold'>Address</h5>
-                            <p className='w-96'>PLOT C – 203 , PHASE – 8 B, MOHALI, MOHALI, SAS Nagar , 26-Punjab, 91-INDIA, 160070</p>
+                            <p className='lg:w-96 w-80'>PLOT C – 203 , PHASE – 8 B, MOHALI, MOHALI, SAS Nagar , 26-Punjab, 91-INDIA, 160070</p>
                         </div>
                         <div className='mt-5'>
                             <h5 className='text-(--blue)  text-xl font-bold'>Email</h5>
@@ -43,7 +43,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-col space-y-3'>
+                    <div className='flex flex-col space-y-3 mt-10'>
                         <h4 className="text-3xl  inline-block font-bold  ">Our Services</h4>
                         <div className='flex  col-auto   gap-16'>
 
@@ -78,7 +78,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <ul className=" space-y-3 ">
+                    <ul className=" space-y-3 mt-10">
                         <h4 className="text-3xl  inline-block font-bold">Quick Links</h4>
 
                         <li className=" transition-colors cursor-pointer hover:text-(--blue) mt-3">Home</li>
@@ -91,7 +91,7 @@ const Footer = () => {
 
                     </ul>
 
-                    <ul className="flex flex-col space-y-3  w-full max-w-[400px]">
+                    <ul className="flex flex-col space-y-3  w-full max-w-[400px] mt-10">
                         <h4 className="text-3xl  inline-block font-bold ">We are dedicated to find the right solution for you.</h4>
 
                         <li className=" transition-colors cursor-pointer underline decoration-2 font-bold text-xl flex items-center gap-1 mt-8">Get in Touch <RxArrowTopRight className='text-2xl' /></li>
@@ -102,7 +102,7 @@ const Footer = () => {
 
             
 
-            <div className="text-center mt-28 pt-10 pb-10  border-t border-(--black)   flex flex-col md:flex-row justify-between items-center ">
+            <div className="text-center mt-28 pt-10 pb-10  border-t border-(--black)   flex flex-col md:flex-row justify-between items-center px-5">
                 <p>© Copyright 2025. Atrix IT Solutions | All Right Reserved.</p>
                 <ul className='flex justify-end items-center gap-3'>
                     <li className='border-r pr-4 '>Support Policy</li>

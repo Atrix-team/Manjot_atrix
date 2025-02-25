@@ -13,7 +13,7 @@ const TechnologySecPart = () => {
     const data = activeSection === 'frontend' ? frontend : backend;
 
     return (
-        <div className='p-20'>
+        <div className='px-5 py-20'>
             <style>
                 {`
                 .icon-ul li:nth-child(1) > div, .icon-ul li:nth-child(6) > div {
@@ -21,10 +21,10 @@ const TechnologySecPart = () => {
                 }
                 `}
             </style>
-
+<div className='container mx-auto ]'>
             <div className='flex justify-center gap-3'>
                 <h6
-                    className={`bg-(--black) px-5 py-2 text-lg rounded-full font-bold w-32 cursor-pointer relative ${
+                    className={`bg-(--black) md:px-5 md:py-2 text-lg rounded-full font-bold md:w-32 w-28  pl-3 py-1 cursor-pointer relative ${
                         activeSection === 'frontend' ? 'bg-(--blue)' : ''
                     }`}
                     onClick={() => handleSectionChange('frontend')}
@@ -35,7 +35,7 @@ const TechnologySecPart = () => {
                     )}
                 </h6>
                 <h6
-                    className={`bg-(--black) px-5 py-2 text-lg rounded-full font-bold w-32 cursor-pointer relative ${
+                    className={`bg-(--black) md:px-5 md:py-2 text-lg rounded-full font-bold md:w-32 w-28  pl-3 py-1 cursor-pointer relative ${
                         activeSection === 'backend' ? 'bg-(--blue)' : ''
                     }`}
                     onClick={() => handleSectionChange('backend')}
@@ -47,19 +47,35 @@ const TechnologySecPart = () => {
                 </h6>
             </div>
 
-            <div className='max-w-[1300px] mx-auto'>
+            <div className='hidden md:block'>
                 <ul className='flex flex-wrap items-end justify-center icon-ul'>
                     {data.map((item, index) => (
                         <li key={index} className='flex items-end w-[16.66%] p-[10px]'>
                             <div className='bg-(--black) rounded-lg w-full flex items-center justify-center flex-col min-h-[180px]'>
                                 <div className='flex justify-center'>
-                                    <img src={item.icons} alt={item.TechnologyName} />
+                                    <img className='h-8 md:h-auto' src={item.icons} alt={item.TechnologyName} />
                                 </div>
-                                <p>{item.TechnologyName}</p>
+                                <p className='text-sm md:text:5xl'>{item.TechnologyName}</p>
                             </div>
                         </li>
                     ))}
                 </ul>
+            </div>
+
+            <div className='md:hidden block'>
+                <ul className='grid grid-cols-2 items-end justify-center mt-5'>
+                    {data.map((item, index) => (
+                        <li key={index} className='flex  p-[10px]'>
+                            <div className='bg-(--black) rounded-lg w-full flex items-center justify-center flex-col min-h-[180px]'>
+                                <div className='flex justify-center'>
+                                    <img className='h-8 md:h-auto' src={item.icons} alt={item.TechnologyName} />
+                                </div>
+                                <p className='text-sm md:text:5xl'>{item.TechnologyName}</p>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
             </div>
         </div>
     );

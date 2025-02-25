@@ -56,7 +56,7 @@ const OurPortfolio = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
@@ -65,26 +65,30 @@ const OurPortfolio = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
-                    initialSlide: 2
+                    infinite: true,
+                    dots: true
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
                 }
             }
         ]
     };
     return (
-        <div className="bg-(--darkblack) text-(--whitelight) py-32 relative overflow-hidden">
+        <div className="bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
              <div className='container mx-auto  '>
-                <div className="flex justify-center  gap-10">
-                    <div className=' font-extrabold'>
-                        <p className='text-gray text-end'>OUR PORTFOLIO</p>
+                <div className='px-5 py-14 md:py-28'>
+                <div className="md:flex justify-center  gap-10 ">
+                    <div className=' font-extrabold md:text-end'>
+                        <p className='text-gray '>OUR PORTFOLIO</p>
                         <h2 className="text-6xl font-bold ">Our Work</h2>
                     </div>
 
@@ -93,11 +97,11 @@ const OurPortfolio = () => {
                             <path fill="#2f2f2f" d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM475 3L475.255 3.42984L476.82 2.5H475V3ZM438.668 65L441.872 60.197L436.111 59.8239L438.668 65ZM3 3.5H475V2.5H3V3.5ZM474.745 2.57016C459.928 11.3742 441.341 27.8789 438.461 60.47L439.457 60.5581C442.3 28.3895 460.613 12.1303 475.255 3.42984L474.745 2.57016Z"></path>
                         </svg>
                     </div>
-                    <div className='mt-1  text-end'>
-                        <div className=' flex justify-end'>
+                    <div className='mt-1  md:text-end'>
+                        <div className=' flex md:justify-end'>
                             <Button className="" mybtn={"View All Portfolio"} />
                         </div>
-                        <p className='w-86 text-gray font-bold mt-4'>
+                        <p className='md:w-86 text-gray font-bold mt-4'>
                             Offer a wide range of services to help businesses establish and enhance their online presence.
                         </p>
                     </div>
@@ -171,6 +175,7 @@ const OurPortfolio = () => {
                     </Slider>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

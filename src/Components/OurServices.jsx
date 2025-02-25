@@ -84,14 +84,14 @@ const OurServices = () => {
           if (stickyImages[index]) {
             stickyImages[index].classList.add("active-img");
             stickyImages[index].style.opacity = "1";
-            stickyImages[index].style.transform = "translate(-50%, -30%) scale(1)";
+            stickyImages[index].style.transform = "translate(-30%, -30%) scale(1)";
           }
         } else {
           card.style.opacity = "0.2";
           if (stickyImages[index]) {
             stickyImages[index].classList.remove("active-img");
             stickyImages[index].style.opacity = "0";
-            stickyImages[index].style.transform = "translate(-60%, -50%) scale(0.7)";
+            stickyImages[index].style.transform = "translate(-50%, -50%) scale(0.7)";
           }
         }
       });
@@ -102,30 +102,37 @@ const OurServices = () => {
   }, []);
 
   return (
-    <div className="bg-(--darkblack) text-(--whitelight) py-20 md:py-40">
+    <div className="bg-(--darkblack) text-(--whitelight) ">
 
       <div className="container mx-auto  ">
+        <div className="px-5 py-14 md:py-28">
         
-        <h2 className="text-center text-3xl md:text-5xl font-bold">Our Services</h2>
+        <h2 className="text-center text-4xl md:text-6xl font-bold">Our Services</h2>
         
-        <div className="flex flex-col md:flex-row   my-4 -mx-4 justify-center ">
+        <div className="flex flex-col md:flex-row   lg:px-28 mx-5  ">
 
           {/* Services List (Left Side) */}
-          <div className="w-full md:w-1/2  ">
+          <div className="w-full md:w-1/2 mt-10  md:mt-28">
             {services.map((service) => (
               <div
                 key={service.id}
                 className="service-card opacity-30 transition-opacity duration-300 mt-20 md:mt-60 first:mt-0 "
               >
+                 <img   key={service.id}
+                  src={service.image}
+                  alt={service.title} 
+                  className="md:hidden flex "
+                  />
                 <div className="flex  items-center gap-3 ">
                   <div className="w-[40px] h-[40px] bg-gradient-to-r from-(--blue) to-(--green) rounded-full translate-y-2 mr-1">
-                    <span className="inline-block ml-2 mt-2 text-2xl">{service.icon}</span>
+                    <div className="inline-block ml-2 mt-2 text-2xl">{service.icon}</div>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold mt-4">{service.title}</h3>
+                  <h3 className="text-xl md:text-3xl font-bold mt-4">{service.title}</h3>
                 </div>
-                <p className="text-md mt-6 md:mt-9 text-(--white) leading-7 md:leading-8">
+                <p className="text-sm md:text-md mt-6 md:mt-9 text-(--white) leading-7 md:leading-8">
                   {service.description}
                 </p>
+               
                 <div className="flex flex-wrap mt-6 md:mt-10">
                   {[
                     "Branding",
@@ -149,14 +156,14 @@ const OurServices = () => {
           </div>
 
           {/* Sticky Images (Right Side) */}
-          <div className="w-1/2  relative  ">
+          <div className="w-1/2  relative md:block hidden  ">
             <div className="sticky top-96">
               {services.map((serviceimg, index) => (
                 <img
                   key={serviceimg.id}
                   src={serviceimg.image}
                   alt={serviceimg.title}
-               className="serviceImg absolute z-10 left-1/4   max-w-[90%] md:max-w-[100%] h-auto opacity-0 scale-70 transition-all duration-200"
+               className="serviceImg absolute z-10 left-1/4   max-w-[100%]  h-auto opacity-0 scale-70 transition-all duration-200"
                 />
               ))}
             </div>
@@ -164,6 +171,7 @@ const OurServices = () => {
      
         </div>
       </div>
+    </div>
     </div>
   );
 };

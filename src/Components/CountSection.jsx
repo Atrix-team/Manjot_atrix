@@ -46,7 +46,7 @@ const CountSection = () => {
 
   return (
     <div
-      className="bg-fixed bg-cover bg-center bg-no-repeat"
+      className="bg-fixed bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage: 'url(https://atrixitsolutions.com/wp-content/uploads/2024/08/demo.jpg)',
         height: '623px',

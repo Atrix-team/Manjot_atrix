@@ -54,24 +54,24 @@ const OurSolution = () => {
 
 
     return (
-        <div className="bg-(--darkblack) text-(--whitelight) py-30 relative mb-[00px] ">
+        <div className="bg-(--darkblack) text-(--whitelight)   relative mb-[00px] ">
             <div className='container mx-auto  '>
 
-                <div className="grid md:grid-cols-3 grid-cols-1  gap-10 ">
-                    <h2 className="text-6xl font-bold mb-12    text-end    tracking-wider">Our Solution <br />Process</h2>
+                <div className='row px-5 py-14 md:py-28'>
+                    <div className=" grid md:grid-cols-3 grid-cols-1  gap-10  ">
+                        <h2 className="text-6xl font-bold md:mb-12    md:text-end    tracking-wider">Our Solution <br />Process</h2>
 
-                    <div className='w-full max-w- flex items-end'>
-                        <svg className='' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 65">
-                            <path fill="#2f2f2f" d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM475 3L475.255 3.42984L476.82 2.5H475V3ZM438.668 65L441.872 60.197L436.111 59.8239L438.668 65ZM3 3.5H475V2.5H3V3.5ZM474.745 2.57016C459.928 11.3742 441.341 27.8789 438.461 60.47L439.457 60.5581C442.3 28.3895 460.613 12.1303 475.255 3.42984L474.745 2.57016Z"></path>
-                        </svg>
+                        <div className='w-full max-w- flex items-end'>
+                            <svg className='' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 65">
+                                <path fill="#2f2f2f" d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM475 3L475.255 3.42984L476.82 2.5H475V3ZM438.668 65L441.872 60.197L436.111 59.8239L438.668 65ZM3 3.5H475V2.5H3V3.5ZM474.745 2.57016C459.928 11.3742 441.341 27.8789 438.461 60.47L439.457 60.5581C442.3 28.3895 460.613 12.1303 475.255 3.42984L474.745 2.57016Z"></path>
+                            </svg>
+                        </div>
+                        <p className='lg:w-86 md:px-0 px-1 text-(--gray)  flex items-end justify-center font-bold'>
+                            Digital agencies can vary in size and specialization. Some may focus on specific niches, such as healthcare or e-commerce, while others may offer a comprehensive.
+                        </p>
                     </div>
-                    <p className='w-86  text-(--gray)  flex  items-end font-bold'>
-                        Digital agencies can vary in size and specialization. Some may focus on specific niches, such as healthcare or e-commerce, while others may offer a comprehensive.
-                    </p>
-                </div>
-
-                <div className='grid md:grid-cols-2 grid-cols-1 items-start relative mt-20 '>
-                    <div id="circle-sec" className=" flex justify-center sticky top-40">
+                <div className='col-1 grid md:grid-cols-2 grid-cols-1 items-start relative mt-10 '>
+                    <div id="circle-sec" className=" md:flex justify-center sticky md:top-40 hidden ">
                         <div id="circle-wrapper" className="circle-wrapper h-[340px] w-[340px] rounded-[50%] border-[4px] border-[#2F2F2F] flex justify-center items-center">
                             <div className="circle-content h-[320px] w-[320px] bg-[#1A1A1A] rounded-[50%] flex flex-col justify-center items-center">
                                 <p className="text-xl font-bold text-(--gray)">Step</p>
@@ -80,10 +80,10 @@ const OurSolution = () => {
                         </div>
                     </div>
 
-                    <div id="process-cards" className="border-l border-(--gray) relative">
-                        <div className="w-full max-w-[600px] pl-20 pr-20 z-50  ">
+                    <div id="process-cards" className=" col-2 md:border-l border-(--gray) relative">
+                        <div className="w-full max-w-[600px] px-10 z-50  ">
                             {blurbContent.map((item, index) => (
-                                <div key={index} className="blurb-item pb-20 bg-(--darkblack) sticky top-20 pt-10">
+                                <div key={index} className="blurb-item pb-20 bg-(--darkblack) sticky top-20  pt-10">
                                     <img src={item.image} alt={item.title} className="filter invert brightness-0 contrast-100 mb-8" />
                                     <h1 className="text-4xl font-bold mb-8">{item.title}</h1>
                                     <p className="mb-5 text-(--gray)">{item.description}</p>
@@ -100,7 +100,8 @@ const OurSolution = () => {
                     </div>
                 </div>
             </div>
-            
+            </div>
+
 
 
         </div>
@@ -114,24 +115,28 @@ export default OurSolution;
 
 const blurbContent = [
     {
+        id: 1,
         image: icons1,
         title: "Discovery and Consultation.",
         description: "Understand the client's goals, challenges, and requirements through initial meetings and consultations.",
         additionalText: ["Client Meeting", "Needs Assessment", "Strategic Planning"]
     },
     {
+        id: 2,
         image: icons2,
         title: "Design and Architecture.",
         description: "If applicable, create a user-centric design for software interfaces, websites, or applications.",
         additionalText: ["Wireframing", "Design Mockups", "Implementation."]
     },
     {
+        id: 3,
         image: icons3,
         title: "Development.",
         description: "Understand the client's goals, challenges, and requirements through initial meetings and consultations.",
         additionalText: ["Testing Plans.", "Bug Fixing.", "Agile Development."]
     },
     {
+        id: 4,
         image: icons4,
         title: "Documentation & Launch.",
         description: "Understand the client's goals, challenges, and requirements through initial meetings and consultations.",

@@ -171,16 +171,18 @@ const Home = () => {
 
 
       {/* About Us Section */}
-      <div className="bg-(--darkblack) py-14  container mx-auto max-w-full">
+      <div className="bg-(--darkblack) py-14  container mx-auto ">
         <LogoSlider />
 
-        <div className="bg-(--darkblack) p-">
-          <h1 className="font-bold flex justify-center md:right-60 top-14 relative text-8xl md:text-9xl text-transparent p-" style={{ WebkitTextStroke: "1px white" }}>About us</h1>
-          <div className="md:flex items-center justify-center">
-            <img src= {AboutImage} className="h-full  w-full max-w-[1060px]" alt="About Us" />
-            <div className="text-(--white) md:-left-16 relative w-full max-w-[565px]  p-2">
+        <div className="bg-(--darkblack) ">
+          <h1 className="font-bold flex justify-center lg:right-60 top-14 relative text-8xl md:text-9xl text-transparent z-10" style={{ WebkitTextStroke: "1px white" }}>About us</h1>
+          <div className="lg:flex items-center px-2">
+            <div className='inline-block relative max-w-[100%]'>
+            <img src= {AboutImage} className="h-full  w-auto min-h-[600px] object-cover relative max-w-[100%]" alt="About Us" />
+            </div>
+            <div className="text-(--white) lg:-ml-16  relative w-full md:max-w-[40%] px-5 ">
               <p className="text-xl font-semibold text-(--gray) mb-2">Our Vision</p>
-              <h5 className="text-5xl font-bold mb-5">Unlock Revenue Growth for Your Business</h5>
+              <h5 className="lg:text-5xl sm:text-lg font-bold mb-5">Unlock Revenue Growth for Your Business</h5>
               <h6 className="text-2xl font-semibold mb-10">Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs perfectly.</h6>
               <div className="border border-(--black) mb-5"></div>
               <p className="text-md text-(--gray) mb-4">Through our years of experience, we’ve also learned that while each channel has its own set of advantages, they all work best when strategically paired with other channels. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
@@ -190,14 +192,20 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Lazy-Loaded Components with Intersection Observer */}
       <div ref={ourServicesRef}>
         {visibleComponents.ourServices ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20">Loading Our Services...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20 ">Loading Our Services...</div>}>
             <OurServices />
           </Suspense>
         ) : (
-          <div className="text-(--white) text-center py-20">Loading Our Services...</div>
+          <div className="text-(--white) text-center py-20">
+        <div className="flex items-center justify-center">
+                       <div className="spinner-border animate-spin inline-block w-8 h-8 rounded-full" role="status">
+                 <span className="visually-hidden"></span>
+            </div>
+          </div> 
+          <div>Loading Our Services...</div>
+        </div>
         )}
       </div>
 
