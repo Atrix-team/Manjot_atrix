@@ -21,7 +21,7 @@ const TechnologySecPart = () => {
                 }
                 `}
             </style>
-<div className='container mx-auto ]'>
+<div className='container mx-auto  max-w-[1280px]'>
             <div className='flex justify-center gap-3'>
                 <h6
                     className={`bg-(--black) md:px-5 md:py-2 text-lg rounded-full font-bold md:w-32 w-28  pl-3 py-1 cursor-pointer relative ${

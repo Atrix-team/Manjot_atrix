@@ -139,74 +139,58 @@ import React from 'react';
 import Logo from "../assets/ais-logo.png"
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link, useLocation } from "react-router-dom"
 import Button from './Button';
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'About Us', href: 'about', current: false },
-  { name: 'Our Services', href: '#', current: false },
-  { name: ' FAQ’s', href: '#', current: false },
-
-  { name: 'Contact Us', href: '#', current: false },
+  { name: 'Home', path: '/', current: true },
+  { name: 'About Us', path: '/about', current: false },
+  { name: 'Our Services', path: '/services', current: false },
+  { name: 'FAQ’s', path: '/faqs', current: false },
+  { name: 'Contact Us', path: '/contact', current: false },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Navbar() {
+  const location = useLocation();
+
   return (
-    <Disclosure as="nav" className=" absolute top-0 left-0 w-full z-10 ">
-      <div className="mx-auto  px-5 sm:px-6 lg:px-8">
+    <Disclosure as="nav" className="absolute top-0 left-0 w-full z-10">
+      <div className="mx-auto px-5 sm:px-6 lg:px-8">
         <div className="relative flex h-32 items-center justify-between">
-        
-          <div className="flex  items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <img
                 alt="Your Company"
                 src={Logo}
-                className=" w-auto h-16 md:h-24 logo filter grayscale-100 brightness-800"
+                className="w-auto h-16 md:h-24 logo filter grayscale-100 brightness-800"
               />
             </div>
+          </div>
+
+          <div className="hidden sm:ml-6 sm:block">
+            <div className="flex space-x-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  aria-current={location.pathname === item.path ? 'page' : undefined}
+                  className={`${
+                    location.pathname === item.path ? 'bg-(--navbarUlbgcolor) text-(--blue)' : 'text-(--white) hover:bg-(--navbarUlbgcolor) hover:text-(--blue)'
+                  } rounded-md px-3 py-1 lg:text-lg md:text-sm sm:text-sm text-[2px] font-bold`}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
-          
-          <div className="hidden  sm:ml-6 sm:block">
-              <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? 'bg-(--navbarUlbgcolor)  text-(--blue)' : 'text-(--white) hover:bg-(--navbarUlbgcolor) hover:text-(--blue)',
-                      'rounded-md px-3 py-2 lg:text-md md:text-sm sm:text-sm text-[2px] font-bold',
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden  ">
-           <Button className="relative" mybtn={"Let's Talk"} />
-
-            {/* <button
-              type="button"
-              className="relative rounded-lg bg-(--navbarUlbgcolor) p-2 text-(--white) hover:text-(--white) hover:bg-(--green) "
-            >
-       Let's Talk
-           
-             
-            </button> */}
-
-            {/* Profile dropdown */}
-          
+          <div className="absolute inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden">
+            <Button className="relative" mybtn={"Let's Talk"} />
           </div>
-            <div className=" left-0 flex items-center justify-end sm:hidden">
-            {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-end rounded-md p-2 text-(--white) bg-(--navbarUlbgcolor) hover:bg-gray-700 hover:text-(--white) focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
-              <span className="absolute -inset-0.5 " />
+
+          <div className="left-0 flex items-center justify-end sm:hidden">
+            <DisclosureButton className="group relative inline-flex items-center justify-end rounded-md p-2 text-(--white) bg-(--navbarUlbgcolor) hover:bg-(--black) hover:text-(--white) focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+              <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden bg-(--navbarUlbgcolor)" />
               <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block bg-(--navbarUlbgcolor)" />
@@ -220,13 +204,12 @@ export default function Navbar() {
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
-              as="a"
-              href={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
+              as={Link}
+              to={item.path}
+              aria-current={location.pathname === item.path ? 'page' : undefined}
+              className={`${
+                location.pathname === item.path ? 'bg-(--navbarUlbgcolor) text-(--blue)' : 'text-(--white) hover:bg-(--navbarUlbgcolor) hover:text-(--blue)'
+              } block rounded-md px-3 py-2 text-base font-medium`}
             >
               {item.name}
             </DisclosureButton>

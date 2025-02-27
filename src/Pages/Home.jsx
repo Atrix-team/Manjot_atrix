@@ -5,7 +5,7 @@ import ParticleEffect from '../Components/ParticleEffect';
 import TypewriterEffect from '../Components/TyingWriter';
 import LogoSlider from '../Components/marqueelogo/LogoSlider';
 import Button from '../Components/Button';
-import useIntersectionObserver from '../Components/useIntersectionObserver'; 
+import useIntersectionObserver from '../Components/useIntersectionObserver';
 import AboutImage from "../assets/AboutImage.jpg"
 
 // Lazy load all components
@@ -104,51 +104,56 @@ const Home = () => {
     };
   }, []);
 
-
+  const lines = [
+    '  innovative,growing,creative',
+    '  building the future',
+    '  empowering your ideas',
+  ];
 
 
   return (
     <>
       {/* Hero Section */}
-      <div className="container mx-auto max-w-full overflow-hidden">
+      <div className=" overflow-hidden">
         <div className="relative w-full text-(--whitelight) hero_section">
           <div className="pointer-events-none absolute inset-0 h-full">
             <ParticleEffect />
           </div>
-          <div className="flex justify-center items-center min-h-screen py-46">
+          <div className='container mx-auto '>
+          <div className="flex justify-center items-center min-h-screen py-46 px-5">
             <div className="text-center relative">
               <h1 className="text-(--whitelight) mt-5 text-6xl md:text-8xl lg:text-9xl">
                 <div className="relative inline-block">
                   <div className="font-bold tracking-wider">We deliver</div>
-                  <div className="absolute bottom-[4%] -right-[20%] text-center z-20 animateFromTop tracking-normal">
+                  <div className="absolute md:bottom-[4%] bottom-[80%]  md:-right-[20%]  right-0 text-center z-20 animateFromTop tracking-normal">
                     <p className="bg-(--white) text-(--black) border font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl -rotate-7 font-bold moveWithMouse">
                       Marketing
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center text-center">
+                <div className="md:flex  items-center justify-center text-center">
                   <div className="relative inline-block">
                     <div className="font-bold tracking-wider">personal</div>
-                    <div className="absolute -top-[2%] md:top-[0%] left-[0%] text-center z-20 animateFromTop tracking-normal">
+                    <div className="absolute -top-[2%] left-[0%] text-center z-20 animateFromTop tracking-normal">
                       <p className="bg-(--green) text-(--black) font-body border border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-5 font-bold moveWithMouse">
                         Web Development
                       </p>
                     </div>
                   </div>
-                  <div className="relative typewiter-wraper ml-10 text-5xl w-[45rem] font-normal rounded-full px-16 mt- font-body">
+                  <div className="relative typewiter-wraper md:text-5xl text-lg md:w-[45rem] w-[20rem]  font-normal rounded-full md:px-16 px-3 mt- font-body">
                     <TypewriterEffect
-                      text="  innovative, growing, creative"
+                      lines={lines}
                       speed={170}
                       deleteSpeed={100}
-                      delay={150}
+                      delay={1500}
                     />
                   </div>
                 </div>
 
                 <div className="relative inline-block">
                   <div className="font-bold tracking-wider">solutions</div>
-                  <div className="absolute bottom-[2%] md:bottom-[10%] -left-[30%] text-center z-20 animateFromTop tracking-normal">
+                  <div className="absolute -bottom-[25%] md:bottom-[10%] md:-left-[30%] text-center z-20 animateFromTop tracking-normal">
                     <p className="bg-(--blue) text-(--black) border   font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-12 font-bold moveWithMouse">
                       Brand Identity
                     </p>
@@ -163,6 +168,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+          </div>
         </div>
       </div>
 
@@ -171,19 +177,19 @@ const Home = () => {
 
 
       {/* About Us Section */}
+      <LogoSlider className="max-w-full" />
       <div className="bg-(--darkblack) py-14  container mx-auto ">
-        <LogoSlider />
 
         <div className="bg-(--darkblack) ">
           <h1 className="font-bold flex justify-center lg:right-60 top-14 relative text-8xl md:text-9xl text-transparent z-10" style={{ WebkitTextStroke: "1px white" }}>About us</h1>
           <div className="lg:flex items-center px-2">
             <div className='inline-block relative max-w-[100%]'>
-            <img src= {AboutImage} className="h-full  w-auto min-h-[600px] object-cover relative max-w-[100%]" alt="About Us" />
+              <img src={AboutImage} className="h-full  w-auto min-h-[600px] object-cover relative max-w-[100%]" alt="About Us" />
             </div>
-            <div className="text-(--white) lg:-ml-16  relative w-full md:max-w-[40%] px-5 ">
-              <p className="text-xl font-semibold text-(--gray) mb-2">Our Vision</p>
-              <h5 className="lg:text-5xl sm:text-lg font-bold mb-5">Unlock Revenue Growth for Your Business</h5>
-              <h6 className="text-2xl font-semibold mb-10">Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs perfectly.</h6>
+            <div className="text-(--white) lg:-ml-16  relative w-full lg:max-w-[40%] px-5 ">
+              <p className="text-xl sm:text-md font-semibold text-(--gray) mb-2">Our Vision</p>
+              <h5 className="lg:text-5xl text-2xl font-bold mb-5">Unlock Revenue Growth for Your Business</h5>
+              <h6 className="lg:text-2xl text-xl sm:text:lg font-semibold mb-10">Our goal is to make it as easy as possible for you to walk away with the solution that suits your needs perfectly.</h6>
               <div className="border border-(--black) mb-5"></div>
               <p className="text-md text-(--gray) mb-4">Through our years of experience, we’ve also learned that while each channel has its own set of advantages, they all work best when strategically paired with other channels. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
               <Button mybtn={"Learn More"} />
@@ -199,13 +205,13 @@ const Home = () => {
           </Suspense>
         ) : (
           <div className="text-(--white) text-center py-20">
-        <div className="flex items-center justify-center">
-                       <div className="spinner-border animate-spin inline-block w-8 h-8 rounded-full" role="status">
-                 <span className="visually-hidden"></span>
+            <div className="flex items-center justify-center">
+              <div className="spinner-border animate-spin inline-block w-8 h-8 rounded-full" role="status">
+                <span className="visually-hidden"></span>
+              </div>
             </div>
-          </div> 
-          <div>Loading Our Services...</div>
-        </div>
+            <div>Loading Our Services...</div>
+          </div>
         )}
       </div>
 

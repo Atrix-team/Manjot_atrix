@@ -46,12 +46,10 @@ const OurPortfolio = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-
-        autoplay: true,
+         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
 
-        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -84,7 +82,7 @@ const OurPortfolio = () => {
     };
     return (
         <div className="bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
-             <div className='container mx-auto  '>
+             <div className='container mx-auto max-w-[1280px] '>
                 <div className='px-5 py-14 md:py-28'>
                 <div className="md:flex justify-center  gap-10 ">
                     <div className=' font-extrabold md:text-end'>
