@@ -6,7 +6,7 @@ import Logo from "../assets/ais-logo.png"
 
 const Footer = () => {
     return (
-        <div className='bg-(--darkblack) text-(--white)  mt-18'>
+        <footer className='bg-(--darkblack) text-(--white)  mt-18'>
 
             <div className='container mx-auto max-w-[1700px] '>
                 <div className=' flex flex-col lg:flex-row justify-between  gap-1 px-5  '>
@@ -26,10 +26,11 @@ const Footer = () => {
                             <h5 className='text-(--blue) text-xl font-bold'>Social Just You Connected Us!</h5>
                             <ul>
                                 <li className="flex relative  mt-3    space-x-4 z-10">
-                                    <div className="border border-(--black) bg-(--black) p-2 rounded-full transition-colors text-xl cursor-pointer">
+                                    <div className="border border-(--black) bg-(--black) hover:bg-gradient-to-r from-(--blue) to-(--green)   p-2 rounded-full transition-colors text-xl cursor-pointer">
                                         <FaFacebookF />
                                     </div>
-                                    <div className="border border-(--black) bg-(--black) p-2 rounded-full transition-colors text-xl cursor-pointer">
+                                    <div className="border border-(--black) 
+                                    p-2 rounded-full transition-colors text-xl cursor-pointer">
                                         <FaXTwitter />
                                     </div>
                                     <div className="border border-(--black) bg-(--black) p-2 rounded-full transition-colors text-xl cursor-pointer">
@@ -111,7 +112,7 @@ const Footer = () => {
                 </ul>
             </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

@@ -4,9 +4,9 @@ import TechnologySecPart from './TechnologySecPart';
 const Technology = () => {
 
     return (
-        <div className="bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
+        <div className="Technology-section bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
             <div className='container mx-auto  max-w-[1280px] '>
-                <div className='px-5 py-14 md:py-28'>
+                <div className='px-5 py-10 md:py-16'>
                     <div className="md:flex   ">
                         <div className='font-extrabold'>
                             <h2 className="text-5xl font-bold ">We Used Advance TECHNOLOGY</h2>
@@ -33,5 +33,3 @@ const Technology = () => {
 };
 
 export default Technology;
-
-// Frontend data

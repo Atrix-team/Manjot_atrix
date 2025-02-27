@@ -69,14 +69,15 @@
     border: 1px solid transparent;
     border-radius: 24px;
     color: var(--whitelight);
-    transition: background 0.5s ease-in-out;
+    transition: background 0.9s ease, color 0.9s ease;
   }
   
   :hover.custom-gradient {
     background: linear-gradient(45deg, var(--blue) 20%, var(--green) 80%) padding-box,
                 linear-gradient(45deg, var(--blue) 20%, var(--green) 80%) border-box;
     color: var(--whitelight);
-    transition: background 0.5s ease-in-out ;
+
+    
   }
 
 

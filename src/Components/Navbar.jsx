@@ -167,7 +167,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden sm:ml-6 sm:block">
+          <div className="hidden lg:ml-6 lg:block">
             <div className="flex space-x-4">
               {navigation.map((item) => (
                 <Link
@@ -184,11 +184,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden">
+          <div className="absolute inset-y-0 right-0 lg:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden">
             <Button className="relative" mybtn={"Let's Talk"} />
           </div>
 
-          <div className="left-0 flex items-center justify-end sm:hidden">
+          <div className="left-0 flex items-center justify-end lg:hidden">
             <DisclosureButton className="group relative inline-flex items-center justify-end rounded-md p-2 text-(--white) bg-(--navbarUlbgcolor) hover:bg-(--black) hover:text-(--white) focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
@@ -199,7 +199,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <DisclosurePanel className="sm:hidden">
+      <DisclosurePanel className="lg:hidden ">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-(--navbarUlbgcolor) z-50">
           {navigation.map((item) => (
             <DisclosureButton

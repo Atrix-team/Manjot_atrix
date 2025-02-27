@@ -40,7 +40,7 @@ const OurSolution = () => {
             let currectPos = allCardValues.top
             const percentage = -(Math.floor((currectPos / cardHeight) * 100))
 
-            circleWrapper.style.background = `conic-gradient(#2F2F2F ${percentage + 15}%, #1A1A1A 0%)`;
+            circleWrapper.style.background = `conic-gradient(var(--blue) ${percentage + 15}%, #1A1A1A 0%)`;
         }
         window.addEventListener("load", circleAnimation)
         window.addEventListener("scroll", circleAnimation)
@@ -54,12 +54,12 @@ const OurSolution = () => {
 
 
     return (
-        <div className="bg-(--darkblack) text-(--whitelight)   relative mb-[00px] ">
+        <div className="Our-Solution-Process-section bg-(--darkblack) text-(--whitelight)   relative mb-[00px] ">
             <div className='container mx-auto  max-w-[1280px]'>
 
                 <div className='row px-5 py-14 md:py-28'>
                     <div className=" grid md:grid-cols-3 grid-cols-1  gap-10  ">
-                        <h2 className="text-6xl font-bold md:mb-12    md:text-end    tracking-wider">Our Solution <br />Process</h2>
+                        <h2 className="text-6xl font-bold md:mb-8    md:text-end    tracking-wider">Our Solution <br />Process</h2>
 
                         <div className='w-full max-w- flex items-end'>
                             <svg className='' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 65">
@@ -70,7 +70,7 @@ const OurSolution = () => {
                             Digital agencies can vary in size and specialization. Some may focus on specific niches, such as healthcare or e-commerce, while others may offer a comprehensive.
                         </p>
                     </div>
-                <div className='col-1 grid md:grid-cols-2 grid-cols-1 items-start relative mt-10 '>
+                <div className='col-1 grid md:grid-cols-2 grid-cols-1 items-start relative mt-32 '>
                     <div id="circle-sec" className=" md:flex justify-center sticky md:top-28 hidden ">
                         <div id="circle-wrapper" className="circle-wrapper h-[340px] w-[340px] rounded-[50%] border-[4px] border-[#2F2F2F] flex justify-center items-center">
                             <div className="circle-content h-[320px] w-[320px] bg-[#1A1A1A] rounded-[50%] flex flex-col justify-center items-center">
@@ -80,11 +80,12 @@ const OurSolution = () => {
                         </div>
                     </div>
 
-                    <div id="process-cards" className=" col-2 md:border-l border-(--gray) relative">
-                        <div className="w-full max-w-[600px] px-10 z-50  ">
+                    <div id="process-cards" className=" col-2 md:border-l border-(--black) relative">
+                        <div className="w-full  px-10 md:pl-26 md:px-0 z-50  ">
                             {blurbContent.map((item, index) => (
                                 <div key={index} className="blurb-item pb-32 bg-(--darkblack) sticky top-20">
                                     <img src={item.image} alt={item.title} className="filter invert brightness-0 contrast-100 mb-8" />
+                                    <p className='md:hidden flex text-lg opacity-50 mb-1'>Step   {item.id}</p>
                                     <h1 className="text-4xl font-bold mb-8">{item.title}</h1>
                                     <p className="mb-5 text-(--gray)">{item.description}</p>
                                     <ul>

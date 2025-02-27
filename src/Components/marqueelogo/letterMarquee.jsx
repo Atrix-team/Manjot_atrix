@@ -58,7 +58,7 @@ const LetterMarquee = () => {
     }, []);
 
     return (
-        <div className='bg-(--darkblack) '>
+        <div className='bg-(--black) '>
             <div className="overflow-hidden flex bg-(--black) text-(--white)">
                 <div
                     ref={marqueeRef}

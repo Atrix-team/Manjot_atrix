@@ -6,9 +6,8 @@ import TypewriterEffect from '../Components/TyingWriter';
 import LogoSlider from '../Components/marqueelogo/LogoSlider';
 import Button from '../Components/Button';
 import useIntersectionObserver from '../Components/useIntersectionObserver';
-import AboutImage from "../assets/AboutImage.jpg"
+import AboutImage from "../assets/AboutImage.jpg";
 
-// Lazy load all components
 const OurServices = React.lazy(() => import('../Components/OurServices'));
 const CountSection = React.lazy(() => import('../Components/CountSection'));
 const OurSolution = React.lazy(() => import('../Components/OurSolution'));
@@ -18,7 +17,6 @@ const LetterMarquee = React.lazy(() => import('../Components/marqueelogo/LetterM
 
 
 const Home = () => {
-  // Create refs for each component
   const ourServicesRef = useRef(null);
   const countSectionRef = useRef(null);
   const ourSolutionRef = useRef(null);
@@ -26,7 +24,6 @@ const Home = () => {
   const technologyRef = useRef(null);
   const letterMarqueeRef = useRef(null);
 
-  // State to track which components are visible
   const [visibleComponents, setVisibleComponents] = useState({
     ourServices: false,
     countSection: false,
@@ -36,7 +33,6 @@ const Home = () => {
     letterMarquee: false,
   });
 
-  // Use the custom hook for each component
   const isOurServicesVisible = useIntersectionObserver(ourServicesRef, { threshold: 0.1 });
   const isCountSectionVisible = useIntersectionObserver(countSectionRef, { threshold: 0.1 });
   const isOurSolutionVisible = useIntersectionObserver(ourSolutionRef, { threshold: 0.1 });
@@ -44,7 +40,6 @@ const Home = () => {
   const isTechnologyVisible = useIntersectionObserver(technologyRef, { threshold: 0.1 });
   const isLetterMarqueeVisible = useIntersectionObserver(letterMarqueeRef, { threshold: 0.1 });
 
-  // Update visible components state
   useEffect(() => {
     if (isOurServicesVisible) {
       setVisibleComponents((prev) => ({ ...prev, ourServices: true }));
@@ -113,70 +108,65 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <div className=" overflow-hidden">
         <div className="relative w-full text-(--whitelight) hero_section">
           <div className="pointer-events-none absolute inset-0 h-full">
             <ParticleEffect />
           </div>
-          <div className='container mx-auto '>
-          <div className="flex justify-center items-center min-h-screen py-46 px-5">
-            <div className="text-center relative">
-              <h1 className="text-(--whitelight) mt-5 text-6xl md:text-8xl lg:text-9xl">
-                <div className="relative inline-block">
-                  <div className="font-bold tracking-wider">We deliver</div>
-                  <div className="absolute md:bottom-[4%] bottom-[80%]  md:-right-[20%]  right-0 text-center z-20 animateFromTop tracking-normal">
-                    <p className="bg-(--white) text-(--black) border font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl -rotate-7 font-bold moveWithMouse">
-                      Marketing
-                    </p>
-                  </div>
-                </div>
-
-                <div className="md:flex  items-center justify-center text-center">
+          <div className='container mx-auto  max-w-[1280px]'>
+            <div className="flex justify-center items-center min-h-screen py-46 px-5">
+              <div className="text-center relative">
+                <h1 className="text-(--whitelight) mt-5 text-6xl md:text-8xl lg:text-9xl">
                   <div className="relative inline-block">
-                    <div className="font-bold tracking-wider">personal</div>
-                    <div className="absolute -top-[2%] left-[0%] text-center z-20 animateFromTop tracking-normal">
-                      <p className="bg-(--green) text-(--black) font-body border border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-5 font-bold moveWithMouse">
-                        Web Development
+                    <div className="font-bold tracking-wider">We deliver</div>
+                    <div className="absolute md:bottom-[4%] bottom-[80%]  md:-right-[20%]  right-0 text-center z-0 animateFromTop tracking-normal">
+                      <p className="bg-(--white) text-(--black) border font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl -rotate-7 font-bold moveWithMouse">
+                        Marketing
                       </p>
                     </div>
                   </div>
-                  <div className="relative typewiter-wraper md:text-5xl text-lg md:w-[45rem] w-[20rem]  font-normal rounded-full md:px-16 px-3 mt- font-body">
-                    <TypewriterEffect
-                      lines={lines}
-                      speed={170}
-                      deleteSpeed={100}
-                      delay={1500}
-                    />
-                  </div>
-                </div>
 
-                <div className="relative inline-block">
-                  <div className="font-bold tracking-wider">solutions</div>
-                  <div className="absolute -bottom-[25%] md:bottom-[10%] md:-left-[30%] text-center z-20 animateFromTop tracking-normal">
-                    <p className="bg-(--blue) text-(--black) border   font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-12 font-bold moveWithMouse">
-                      Brand Identity
-                    </p>
+                  <div className="md:flex  items-center justify-center text-center">
+                    <div className="relative inline-block">
+                      <div className="font-bold tracking-wider">personal</div>
+                      <div className="absolute -top-[2%] left-[0%] text-center z-0 animateFromTop tracking-normal">
+                        <p className="bg-(--green) text-(--black) font-body border border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-5 font-bold moveWithMouse">
+                          Web Development
+                        </p>
+                      </div>
+                    </div>
+                    <div className="relative typewiter-wraper  md:text-5xl text-lg md:w-[45rem] w-[20rem]  font-normal rounded-full md:px-16 px-3 mt- font-body">
+                      <TypewriterEffect
+                        lines={lines}
+                        speed={170}
+                        deleteSpeed={100}
+                        delay={1500}
+                      />
+                    </div>
                   </div>
-                </div>
-              </h1>
 
-              <div className="text-center z-20 flex justify-center">
-                <p className="text-(--white) px-10 py-2 text-xl mt-12 font-semibold w-[100%] max-w-[950px]">
-                  Founded with a passion for innovation, our team of young talents brings a fresh perspective to the world of IT and beyond, offering unique and creative solutions tailored to meet the evolving needs of our clients.
-                </p>
+                  <div className="relative inline-block">
+                    <div className="font-bold tracking-wider">solutions</div>
+                    <div className="absolute -bottom-[25%] md:bottom-[10%] md:-left-[30%] text-center z-0 animateFromTop tracking-normal">
+                      <p className="bg-(--blue) text-(--black) border   font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-12 font-bold moveWithMouse">
+                        Brand Identity
+                      </p>
+                    </div>
+                  </div>
+                </h1>
+
+                <div className="text-center z-20 flex justify-center">
+                  <p className="text-(--white) px-10 py-2 text-xl mt-12 font-semibold w-[100%] max-w-[950px]">
+                    Founded with a passion for innovation, our team of young talents brings a fresh perspective to the world of IT and beyond, offering unique and creative solutions tailored to meet the evolving needs of our clients.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
 
 
-
-
-
-      {/* About Us Section */}
       <LogoSlider className="max-w-full" />
       <div className="bg-(--darkblack) py-14  container mx-auto ">
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-// import "../CSS/stylesheetParticleEffect.css"; 
-import "../CSS/Particle.css";
-
+import "../CSS/stylesheetParticleEffect.css"; 
+// import "../CSS/Particle.css";
 const ParticleEffect = () => {
   const canvasRef = useRef(null);
 
@@ -15,20 +14,20 @@ const ParticleEffect = () => {
     let innerParticles = [];
     const centerX = canvas.width / 2;
     const centerY = canvas.height / 2;
-    const outerRadius = 310;
-    const innerRadius = 290;
-    const maxDistance = 890;
-    const outerParticleCount = 3;
-    const innerParticleCount = 5;
+    const outerRadius = 170;
+    const innerRadius = 160;
+    const maxDistance = 450;
+    const outerParticleCount = 1;
+    const innerParticleCount = 2;
 
     class OuterParticle {
       constructor() {
-        this.angle = Math.random() * Math.PI * 3;
+        this.angle = Math.random() * Math.PI * 2;
         this.distance = outerRadius + Math.random() * 10;
-        this.speed = Math.random() * 0.3 + 0.04;
+        this.speed = Math.random() * 0.1 + 0.02;
         this.opacity = 1;
-        this.size = Math.random() * 0.5 + 0.7 ;
-        this.direction = Math.random() > 0.7 ? 1 : -1;
+        this.size = Math.random() * 0.3 + 0.5;
+        this.direction = Math.random() > 0.5 ? 1 : -1;
       }
 
       update() {
@@ -136,7 +135,6 @@ const ParticleEffect = () => {
     createParticles();
     animate();
 
-    // Cleanup on unmount
     return () => {
       outerParticles = [];
       innerParticles = [];

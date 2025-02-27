@@ -31,7 +31,7 @@ const OurPortfolio = () => {
         {
             img: project4,
             title: "Diseño Gráfico",
-            work: ["Development", "Software", "Web Design"]
+            work: ["Development", "Software"]
         },
         {
             img: project3,
@@ -81,7 +81,7 @@ const OurPortfolio = () => {
         ]
     };
     return (
-        <div className="bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
+        <div className="Protfolio-section bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
              <div className='container mx-auto max-w-[1280px] '>
                 <div className='px-5 py-14 md:py-28'>
                 <div className="md:flex justify-center  gap-10 ">
@@ -160,7 +160,7 @@ const OurPortfolio = () => {
                                             ))}
                                         </ul>
                                         <div className='relative'>
-                                            <img src={item.img} alt={item.title} className="w-full h-80 object-cover mt-5" />
+                                            <img src={item.img} alt={item.title} className="w-full h-72 object-cover mt-5" />
                                             <button className='bg-(--black)  rounded-full px-2 py-2 text-4xl absolute -bottom-5 right-10 cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
                                         </div>
                                     </div>
