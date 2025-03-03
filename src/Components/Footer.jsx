@@ -8,8 +8,8 @@ const Footer = () => {
     return (
         <footer className='bg-(--darkblack) text-(--white)  mt-18'>
 
-            <div className='container mx-auto max-w-[1700px] '>
-                <div className=' flex flex-col lg:flex-row justify-between  gap-1 px-5  '>
+            <div className='container mx-auto max-w-[1700px] w-[90%]'>
+                <div className=' flex  flex-wrap   justify-between  gap-1   '>
 
                     <div className='mt-10'>
                         <img src={Logo} className='w-30 ' />
@@ -103,9 +103,9 @@ const Footer = () => {
 
             
 
-            <div className="text-center mt-28 pt-10 pb-10  border-t border-(--black)   flex flex-col md:flex-row justify-between items-center px-5">
+            <div className=" mt-28 pt-10 pb-10  border-t border-(--black)   md:flex  flex-wrap md:justify-between items-center ">
                 <p>© Copyright 2025. Atrix IT Solutions | All Right Reserved.</p>
-                <ul className='flex justify-end items-center gap-3'>
+                <ul className='flex flex-wrap md:justify-end items-center gap-3 md:pt-0 pt-5'>
                     <li className='border-r pr-4 '>Support Policy</li>
                     <li className='border-r pr-4 '>Terms & Conditions</li>
                     <li>Privacy Policy</li>

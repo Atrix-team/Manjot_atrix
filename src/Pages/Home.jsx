@@ -13,7 +13,7 @@ const CountSection = React.lazy(() => import('../Components/CountSection'));
 const OurSolution = React.lazy(() => import('../Components/OurSolution'));
 const OurPortfolio = React.lazy(() => import('../Components/OurPortfolio'));
 const Technology = React.lazy(() => import('../Components/Technology'));
-const LetterMarquee = React.lazy(() => import('../Components/marqueelogo/LetterMarquee'));
+const LetterMarquee = React.lazy(() => import('../Components/marqueelogo/letterMarquee'));
 
 
 const Home = () => {
@@ -113,8 +113,8 @@ const Home = () => {
           <div className="pointer-events-none absolute inset-0 h-full">
             <ParticleEffect />
           </div>
-          <div className='container mx-auto  max-w-[1280px]'>
-            <div className="flex justify-center items-center min-h-screen py-46 px-5">
+          <div className='container mx-auto  max-w-[1280px] w-[90%]'>
+            <div className="flex justify-center items-center md:min-h-screen md:py-46 py-40 ">
               <div className="text-center relative">
                 <h1 className="text-(--whitelight) mt-5 text-6xl md:text-8xl lg:text-9xl">
                   <div className="relative inline-block">
@@ -126,22 +126,24 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="md:flex  items-center justify-center text-center">
+                  <div className="lg:flex  flex-wrap items-center justify-center flexhome  ">
                     <div className="relative inline-block">
                       <div className="font-bold tracking-wider">personal</div>
-                      <div className="absolute -top-[2%] left-[0%] text-center z-0 animateFromTop tracking-normal">
+                      <div className="absolute lg:-top-[2%] -top-[12%] left-[0%] text-center z-0 animateFromTop tracking-normal">
                         <p className="bg-(--green) text-(--black) font-body border border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-5 font-bold moveWithMouse">
                           Web Development
                         </p>
                       </div>
                     </div>
-                    <div className="relative typewiter-wraper  md:text-5xl text-lg md:w-[45rem] w-[20rem]  font-normal rounded-full md:px-16 px-3 mt- font-body">
+                    <div className='flex justify-center'>
+                    <div className="relative typewiter-wraper   md:text-5xl text-lg md:w-[45rem] w-[20rem]  font-normal rounded-full md:px-16 px-3 mt- font-body">
                       <TypewriterEffect
                         lines={lines}
                         speed={170}
                         deleteSpeed={100}
                         delay={1500}
                       />
+                    </div>
                     </div>
                   </div>
 
@@ -155,8 +157,8 @@ const Home = () => {
                   </div>
                 </h1>
 
-                <div className="text-center z-20 flex justify-center">
-                  <p className="text-(--white) px-10 py-2 text-xl mt-12 font-semibold w-[100%] max-w-[950px]">
+                <div className="text-center z-20 flex justify-center ">
+                  <p className="text-(--white) lg:px-10 lg:py-2 md:text-xl text-sm mt-12 font-semibold  max-w-[950px]">
                     Founded with a passion for innovation, our team of young talents brings a fresh perspective to the world of IT and beyond, offering unique and creative solutions tailored to meet the evolving needs of our clients.
                   </p>
                 </div>
@@ -168,11 +170,11 @@ const Home = () => {
 
 
       <LogoSlider className="max-w-full" />
-      <div className="bg-(--darkblack) py-14  container mx-auto ">
+      <div className="bg-(--darkblack) py-10  container mx-auto ">
 
         <div className="bg-(--darkblack) ">
           <h1 className="font-bold flex justify-center lg:right-60 top-14 relative text-8xl md:text-9xl text-transparent z-10" style={{ WebkitTextStroke: "1px white" }}>About us</h1>
-          <div className="lg:flex items-center px-2">
+          <div className="lg:flex items-center ">
             <div className='inline-block relative max-w-[100%]'>
               <img src={AboutImage} className="h-full  w-auto min-h-[600px] object-cover relative max-w-[100%]" alt="About Us" />
             </div>

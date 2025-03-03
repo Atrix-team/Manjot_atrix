@@ -100,7 +100,7 @@ const TypewriterEffect = ({ lines, speed, deleteSpeed, delay }) => {
 
   return (
     <div>
-      <p className='md:h-[55px] h-[30px]'
+      <p className='md:h-[55px] h-[30px] '
         style={{
           display: 'inline-block',
           whiteSpace: 'pre-wrap', 

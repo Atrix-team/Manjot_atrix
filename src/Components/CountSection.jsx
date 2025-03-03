@@ -45,6 +45,7 @@ const CountSection = () => {
   }, [count]);
 
   return (
+    <div className=' mx-auto  container max-w-full'>
     <div
       className="bg-fixed bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
@@ -52,7 +53,7 @@ const CountSection = () => {
         height: '623px',
       }}
     >
-    <div className=' mx-auto  container items-end'>
+    {/* <div className=' mx-auto  container items-end'>
 
       <div className=" flex  items-end gap-16 px-70">
        
@@ -72,6 +73,7 @@ const CountSection = () => {
             </div>
           ))}
         </div>
+      </div> */}
       </div>
       </div>
 

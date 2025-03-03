@@ -55,9 +55,9 @@ const OurSolution = () => {
 
     return (
         <div className="Our-Solution-Process-section bg-(--darkblack) text-(--whitelight)   relative mb-[00px] ">
-            <div className='container mx-auto  max-w-[1280px]'>
+            <div className='container mx-auto  max-w-[1280px] w-[90%]'>
 
-                <div className='row px-5 py-14 md:py-28'>
+                <div className='row  py-14 md:py-28'>
                     <div className=" grid md:grid-cols-3 grid-cols-1  gap-10  ">
                         <h2 className="text-6xl font-bold md:mb-8    md:text-end    tracking-wider">Our Solution <br />Process</h2>
 
@@ -81,16 +81,16 @@ const OurSolution = () => {
                     </div>
 
                     <div id="process-cards" className=" col-2 md:border-l border-(--black) relative">
-                        <div className="w-full  px-10 md:pl-26 md:px-0 z-50  ">
+                        <div className="w-full   md:pl-26  z-50  ">
                             {blurbContent.map((item, index) => (
-                                <div key={index} className="blurb-item pb-32 bg-(--darkblack) sticky top-20">
-                                    <img src={item.image} alt={item.title} className="filter invert brightness-0 contrast-100 mb-8" />
-                                    <p className='md:hidden flex text-lg opacity-50 mb-1'>Step   {item.id}</p>
+                                <div key={index} className="blurb-item pb-20 bg-(--darkblack) pl-1 pt-1 sticky top-20">
+                                    <img src={item.image} alt={item.title} className="filter invert brightness-0 contrast-100 mb-5" />
+                                    <p className='md:hidden inline-block mb-5 bg-(--black) px-5  py-2 rounded-lg font-bold text-sm' >STEP   {item.id}</p>
                                     <h1 className="text-4xl font-bold mb-8">{item.title}</h1>
                                     <p className="mb-5 text-(--gray)">{item.description}</p>
                                     <ul>
                                         {item.additionalText.map((text, idx) => (
-                                            <li className="flex gap-2 items-center text-(--gray)" key={idx}>
+                                            <li className="flex gap-2 items-center text-(--gray) pt-2" key={idx}>
                                                 <FiPlus /> {text}
                                             </li>
                                         ))}

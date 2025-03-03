@@ -97,8 +97,8 @@ const LogoSlider = () => {
   ];
 
   return (
-    <div className='container mx-auto max-w-full pt-14'>
-  <h6 className='flex justify-center items-center mb-10 font-bold text-(--gray) p-2'>OVER 1K+ SOFTWARE BUSINESSES GROWING WITH Atrix IT Solutions</h6>
+    <div className='container mx-auto max-w-full pt-14 '>
+  <h6 className='flex justify-center items-center mb-10 font-bold text-(--gray) px-5'>OVER 1K+ SOFTWARE BUSINESSES GROWING WITH Atrix IT Solutions</h6>
     
     <div className='marquee-2'>
       

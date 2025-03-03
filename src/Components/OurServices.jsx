@@ -1,11 +1,4 @@
 import React, { useEffect } from "react";
-import Service1 from "../assets/ServicesImage/service-1.png";
-import Service2 from '../assets/ServicesImage/service-2.png';
-import Service3 from "../assets/ServicesImage/service-3.png";
-import Service4 from "../assets/ServicesImage/service-4.png";
-import Service5 from "../assets/ServicesImage/service-5.png";
-import Service6 from "../assets/ServicesImage/service-6.png";
-import Service7 from "../assets/ServicesImage/service-7.png";
 import Asset1 from "../assets/ServicesIcons/Asset 1.svg";
 import Asset2 from "../assets/ServicesIcons/Asset 2.svg";
 import Asset3 from "../assets/ServicesIcons/Asset 3.svg";
@@ -21,7 +14,10 @@ import Asset13 from "../assets/ServicesImage/Asset 13.svg";
 // import Asset14 from "../assets/ServicesImage/Asset 14.svg";
 import Asset15 from "../assets/ServicesImage/Asset 15.svg";
 
-import graphic from "../assets/ServicesImage/graphic.svg"
+import graphic from "../assets/ServicesImage/graphic.svg";
+import dev from "../assets/ServicesImage/dev .svg";
+import log from "../assets/ServicesImage/log.svg";
+import marketing from "../assets/ServicesImage/marketing .svg"
 import "../CSS/one.css";
 import Button from "./Button";
 
@@ -37,7 +33,7 @@ const services = [
   },
   {
     id: 2,
-    image: Asset9,
+    image: dev,
     icon: Asset2,
     title: "Mobile Apps",
     description:
@@ -45,7 +41,7 @@ const services = [
   },
   {
     id: 3,
-    image: Asset10,
+    image: log,
     icon: Asset3,
     title: "Backend Development",
     description:
@@ -53,7 +49,7 @@ const services = [
   },
   {
     id: 4,
-    image: Asset11,
+    image: marketing,
     icon: Asset4,
     title: "Frontend Development",
     description:
@@ -77,7 +73,7 @@ const services = [
   },
   {
     id: 7,
-    image: Asset15,
+    image: Asset11,
     icon: Asset7,
     title: "Managed Cloud & DevOps",
     description:
@@ -118,13 +114,13 @@ const OurServices = () => {
   }, []);
 
   return (
-    <div className="Services-section bg-(--darkblack) text-(--whitelight) ">
+    <div className="Services-section  text-(--whitelight) ">
 
-      <div className="container mx-auto  max-w-[1280px] ">
-        <div className="px-5 py-14 md:py-28 ">
+      <div className="container mx-auto  max-w-[1280px] w-[90%]">
+        <div className=" py-14 md:py-32 ">
         
-        <div className="md:flex justify-center  gap-10 ">
-        <h2 className="text-center text-4xl md:text-6xl font-bold">Our Services</h2>
+        <div className="md:flex flex-wrap justify-start gap-10 ">
+        <h2 className=" text-4xl md:text-6xl font-bold">Our Services</h2>
 
 
                     <div className='w-full max-w-[450px] mt-14'>
@@ -142,19 +138,21 @@ const OurServices = () => {
                     </div>
                 </div>
         
-        <div className="flex flex-col md:flex-row   gap-10  mx-5 mt-10  md:mt-28 ">
+        <div className="flex flex-col md:flex-row   gap-10  mt-10  md:mt-20 ">
 
-          <div className="w-full md:w-1/2  md:px-5">
+          <div className="w-full md:w-1/2  ">
             {services.map((service) => (
               <div
                 key={service.id}
                 className="service-card opacity-30 transition-opacity duration-300 mt-20 md:mt-40 first:mt-0 "
               >
+                <div className="flex justify-center items-center pb-5">
                  <img   key={service.id}
                   src={service.image}
                   alt={service.title} 
-                  className="md:hidden flex "
+                  className="md:hidden flex h-80 w-auto"
                   />
+                  </div>
                 <div className="flex  items-center gap-3 ">
                   <div className="min-w-12 h-12 relative flex justify-center items-center bg-gradient-to-r from-(--blue) to-(--green) rounded-full translate-y-2 mr-1">
                   <img src={service.icon} className="w-6 h-6 filter grayscale-100 brightness-800" />

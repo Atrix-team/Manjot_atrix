@@ -6,21 +6,21 @@ import About from './Pages/About';
 
 
 
+
 export default function App() {
     return (
 
-        <BrowserRouter>  
-        
+        <BrowserRouter>
+
             <Routes>
-
-            <Route path="/" element={<OutLet />}>
-            <Route index element={<Home />} />
-            <Route path='/about' element={<About />} />
-
-               </Route>
+                  <Route path="/" element={<OutLet />}>
+                    <Route index element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                  </Route>
 
             </Routes>
-    
+
+
         </BrowserRouter>
 
     )

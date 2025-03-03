@@ -43,12 +43,12 @@ const OurPortfolio = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        // speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
          autoplay: true,
         speed: 2000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
 
         responsive: [
             {
@@ -56,7 +56,7 @@ const OurPortfolio = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
+               
                     dots: true
                 }
             },
@@ -65,7 +65,7 @@ const OurPortfolio = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                    
                     dots: true
                 }
             },
@@ -74,7 +74,7 @@ const OurPortfolio = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: true,
+                  
                     dots: true
                 }
             }
@@ -82,8 +82,8 @@ const OurPortfolio = () => {
     };
     return (
         <div className="Protfolio-section bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
-             <div className='container mx-auto max-w-[1280px] '>
-                <div className='px-5 py-14 md:py-28'>
+             <div className='container mx-auto max-w-[1280px] w-[90%]'>
+                <div className=' py-14 md:py-28'>
                 <div className="md:flex justify-center  gap-10 ">
                     <div className=' font-extrabold md:text-end'>
                         <p className='text-gray '>OUR PORTFOLIO</p>
@@ -144,15 +144,15 @@ const OurPortfolio = () => {
                 .slick-dots {
                 bottom: -50px;}
                 .slick-dots li {
-                margin: 0 9px;}
+                margin: 0 5px;}
                 `}
                     </style>
                     <Slider {...settings} className=''>
                         {Protfolio.map((item, index) => (
-                            <div key={index} className="px-2  ">
+                            <div key={index} className=" md:px-4 px-1">
                                 <div className='border border-(--black)  rounded-2xl'>
-                                    <div className="bg-(--black) pt-10 px-10   rounded-t-lg ">
-                                        <ul className="flex flex-wrap gap-2">
+                                    <div className="bg-(--black) pt-8 px-8   rounded-t-lg ">
+                                        <ul className="flex flex-wrap gap-1">
                                             {item.work.map((workItem, idx) => (
                                                 <li key={idx} className="bg-(--darkblack)   rounded-full px-4 py-1 text-sm hover:bg-(--green)">
                                                     {workItem}
@@ -161,7 +161,7 @@ const OurPortfolio = () => {
                                         </ul>
                                         <div className='relative'>
                                             <img src={item.img} alt={item.title} className="w-full h-72 object-cover mt-5" />
-                                            <button className='bg-(--black)  rounded-full px-2 py-2 text-4xl absolute -bottom-5 right-10 cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
+                                            <button className='bg-(--black)  rounded-full px-2 py-2 text-3xl absolute -bottom-5 right-10 cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
                                         </div>
                                     </div>
                                     <div className="px-12 py-8  ">

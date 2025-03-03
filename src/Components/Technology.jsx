@@ -5,8 +5,8 @@ const Technology = () => {
 
     return (
         <div className="Technology-section bg-(--darkblack) text-(--whitelight)  relative overflow-hidden">
-            <div className='container mx-auto  max-w-[1280px] '>
-                <div className='px-5 py-10 md:py-16'>
+            <div className='container mx-auto  max-w-[1280px] w-[90%]'>
+                <div className='py-10 md:py-16'>
                     <div className="md:flex   ">
                         <div className='font-extrabold'>
                             <h2 className="text-5xl font-bold ">We Used Advance TECHNOLOGY</h2>

@@ -13,7 +13,7 @@ const TechnologySecPart = () => {
     const data = activeSection === 'frontend' ? frontend : backend;
 
     return (
-        <div className='px-5 py-20'>
+        <div className=' py-20'>
             <style>
                 {`
                 .icon-ul li:nth-child(1) > div, .icon-ul li:nth-child(6) > div {
@@ -21,7 +21,7 @@ const TechnologySecPart = () => {
                 }
                 `}
             </style>
-<div className='container mx-auto  max-w-[1280px]'>
+<div className='container mx-auto  max-w-[1280px] w-[90%]'>
             <div className='flex justify-center gap-3'>
                 <h6
                     className={`bg-(--black) md:px-5 md:py-2 text-lg rounded-full font-bold md:w-32 w-28  pl-3 py-1 cursor-pointer relative ${
@@ -68,9 +68,9 @@ const TechnologySecPart = () => {
                         <li key={index} className='flex  p-[10px]'>
                             <div className='bg-(--black) rounded-lg w-full flex items-center justify-center flex-col min-h-[180px]'>
                                 <div className='flex justify-center'>
-                                    <img className='h-8 md:h-auto' src={item.icons} alt={item.TechnologyName} />
+                                    <img className='h-15 md:h-auto' src={item.icons} alt={item.TechnologyName} />
                                 </div>
-                                <p className='text-sm md:text:5xl'>{item.TechnologyName}</p>
+                                <p className='text-lg md:text:5xl'>{item.TechnologyName}</p>
                             </div>
                         </li>
                     ))}
