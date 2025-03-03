@@ -7,7 +7,7 @@ import LogoSlider from '../Components/marqueelogo/LogoSlider';
 import Button from '../Components/Button';
 import useIntersectionObserver from '../Components/useIntersectionObserver';
 import AboutImage from "../assets/AboutImage.jpg";
-
+import Assetarrow from "../assets/Asset 1arrow.svg"
 const OurServices = React.lazy(() => import('../Components/OurServices'));
 const CountSection = React.lazy(() => import('../Components/CountSection'));
 const OurSolution = React.lazy(() => import('../Components/OurSolution'));
@@ -148,11 +148,15 @@ const Home = () => {
                   </div>
 
                   <div className="relative inline-block">
+                    <div className='flex'>
                     <div className="font-bold tracking-wider">solutions</div>
+                    <img src={Assetarrow}  className='w-auto h-20'/>
+                    </div>
                     <div className="absolute -bottom-[25%] md:bottom-[10%] md:-left-[30%] text-center z-0 animateFromTop tracking-normal">
                       <p className="bg-(--blue) text-(--black) border   font-body border-transparent rounded-4xl md:px-8  px-2 py-1 text-sm md:text-2xl rotate-12 font-bold moveWithMouse">
                         Brand Identity
                       </p>
+                      
                     </div>
                   </div>
                 </h1>

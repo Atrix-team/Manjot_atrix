@@ -2,7 +2,7 @@ import React from 'react'
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { RxArrowTopRight } from "react-icons/rx";
 import { FaXTwitter } from "react-icons/fa6";
-import Logo from "../assets/ais-logo.png"
+import Logo from "../assets/Main Logo.svg"
 
 const Footer = () => {
     return (
@@ -12,14 +12,14 @@ const Footer = () => {
                 <div className=' flex  flex-wrap   justify-between  gap-1   '>
 
                     <div className='mt-10'>
-                        <img src={Logo} className='w-30 ' />
+                        <img src={Logo} className='w-auto h-20 ' />
                         <div className='mt-5'>
                             <h5 className='text-(--blue)  text-xl font-bold'>Address</h5>
                             <p className='lg:w-96 w-80'>PLOT C – 203 , PHASE – 8 B, MOHALI, MOHALI, SAS Nagar , 26-Punjab, 91-INDIA, 160070</p>
                         </div>
                         <div className='mt-5'>
                             <h5 className='text-(--blue)  text-xl font-bold'>Email</h5>
-                            <p>info@atrixitsolutions.com</p>
+                            <p>info@apatrixitsolutions.com</p>
                         </div>
 
                         <div className='mt-5'>
@@ -104,7 +104,7 @@ const Footer = () => {
             
 
             <div className=" mt-28 pt-10 pb-10  border-t border-(--black)   md:flex  flex-wrap md:justify-between items-center ">
-                <p>© Copyright 2025. Atrix IT Solutions | All Right Reserved.</p>
+                <p>© Copyright 2025.  Apatrix  IT Solutions | All Right Reserved.</p>
                 <ul className='flex flex-wrap md:justify-end items-center gap-3 md:pt-0 pt-5'>
                     <li className='border-r pr-4 '>Support Policy</li>
                     <li className='border-r pr-4 '>Terms & Conditions</li>

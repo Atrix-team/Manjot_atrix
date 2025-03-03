@@ -10,12 +10,13 @@ export const AdminOutLet = () => {
   return (
     <div>
 
-          <AdminNavbar />
-          <div className='flex'>
-          <AdminSidebar />
-          <Outlet/>     
-          </div>
-     
+      <AdminNavbar />
+      <div className='flex' >
+        <div className=''><AdminSidebar /></div>
+        <div className=''> <Outlet />
+        </div>
+      </div>
+
     </div>
   )
 }

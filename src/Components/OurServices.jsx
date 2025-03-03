@@ -6,18 +6,15 @@ import Asset4 from "../assets/ServicesIcons/Asset 4.svg";
 import Asset5 from "../assets/ServicesIcons/Asset 5.svg";
 import Asset6 from "../assets/ServicesIcons/Asset 6.svg";
 import Asset7 from "../assets/ServicesIcons/Asset 7.svg";
-import Asset9 from "../assets/ServicesImage/Asset 9.svg";
-import Asset10 from "../assets/ServicesImage/Asset 10.svg";
-import Asset11 from "../assets/ServicesImage/Asset 11.svg";
-import Asset12 from "../assets/ServicesImage/Asset 12.svg";
-import Asset13 from "../assets/ServicesImage/Asset 13.svg";
-// import Asset14 from "../assets/ServicesImage/Asset 14.svg";
-import Asset15 from "../assets/ServicesImage/Asset 15.svg";
 
 import graphic from "../assets/ServicesImage/graphic.svg";
-import dev from "../assets/ServicesImage/dev .svg";
+import dev from "../assets/ServicesImage/dev.svg";
 import log from "../assets/ServicesImage/log.svg";
-import marketing from "../assets/ServicesImage/marketing .svg"
+import marketing from "../assets/ServicesImage/marketing.svg";
+import staffing from "../assets/ServicesImage/staffing.svg";
+import vfx from "../assets/ServicesImage/vfx.svg";
+import video from "../assets/ServicesImage/video.svg";
+
 import "../CSS/one.css";
 import Button from "./Button";
 
@@ -27,57 +24,68 @@ const services = [
     id: 1,
     image: graphic,
     icon: Asset1,
-    title: "UI-UX Design",
+    title: "Branding/graphic design",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+      "Did you know? 94% of first impressions are design-related! That’s why strong visuals are key to brand success. Graphic design isn’t just about looks - it’s about delivering your message effectively. At Apatrix IT Solutions, we bring your vision to life with top-notch designs tailored to your needs. Whether it’s branding, websites, infographics, or eBooks, our expert team creates visually captivating content that engages and inspires. Let’s design something impactful!",
+    button: ["BRANDING", "LOGO DESIGN", "PACKAGING", "PRODUCT DESIGN", "PRINT MEDIA", "ADVERTISEMENT","UI/UX"],
   },
   {
     id: 2,
     image: dev,
     icon: Asset2,
-    title: "Mobile Apps",
+    title: "Web Development",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+      "Create stunning, user-friendly websites that captivate, engage, and drive real results with our experts! Whether you need a new website, a redesign, or custom development, we ensure a seamless experience with modern, responsive designs tailored to your brand. Our expert team focuses on creating visually appealing and high-performing websites that boost visibility, attract customers, and grow your business effortlessly. So, take your online presence to the next level!",
+    button: ["AI", "METAVERSE", "SALESFORCE", "CRM", "CMS", "PHP","LARAVEL","REACT JS","NODE JS "],
+
   },
   {
     id: 3,
-    image: log,
+    image: marketing,
     icon: Asset3,
-    title: "Backend Development",
+    title: "Digital Marketing",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+      "At Apatrix IT Solutions, get your own digital marketing strategy built from scratch. Our expert team crafts tailored campaigns to drive traffic, engage customers, and convert leads into loyal clients. Whether it’s SEO, social media marketing, or content creation, we focus on delivering real, measurable results that help your brand stand out. Ready to take your business to the next level? Partner with us today and watch your online presence grow!",
+    button: ["MARKETING", "STRATEGY", "SEO", "SMO", "DIGITAL ADS", "CONTENT CREATION"],
   },
   {
     id: 4,
-    image: marketing,
+    image: vfx,
     icon: Asset4,
-    title: "Frontend Development",
+    title: "Visual Effects",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+      "Looking to bring your ideas to life with stunning visual effects? At Apatrix IT Solutions, we specialize in creating eye-catching VFX that captivate and engage your audience. Whether it's for film, advertisements, or digital media, our expert team delivers cutting-edge effects that enhance your project and leave a lasting impact. Transform your vision into reality with Apatrix IT Solutions today and make your visuals unforgettable!",
+    button: ["VFX", "SFX", "MOTION GRAPHICS", "EDITING", "COMPOSITION", "GRADING","3D"],
+
   },
   {
     id: 5,
-    image: Asset12,
+    image: video,
     icon: Asset5,
-    title: "Artificial Intelligence",
+    title: "Photo/Videography",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+      "Your moments deserve the spotlight! At Apatrix IT Solutions, we specialize in photo and videography that showcases your vision in the most stunning way. From events and branding to creative projects, our team ensures every shot is perfect. With high-quality photography and dynamic videography, we make your ideas come to life. Ready to capture the perfect shot? Partner with Apatrix IT Solutions and let’s create something amazing together!",
+    button: ["CORPORATE SHOOT", "PRODUCT SHOOT","FOOD PHOTOGRAPHY","COMMERCIAL SHOOT "],
   },
   {
     id: 6,
-    image: Asset13,
+    image: staffing,
     icon: Asset6,
-    title: "Data Analysis & Data Science",
+    title: "Staffing",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+      "Ready to boost your business with a flexible workforce? Our solution helps you create a staffing plan that adapts to your needs, saving you money and ensuring compliance. With our platform, you can improve efficiency, reduce costs, and stay ahead in today’s fast-paced market. Empower your business with a staffing strategy designed to grow and succeed!",
+    button: ["US STAFFING", "US RECRUITER", "PAYROLL", "TALENT ACQUISITION ", "US HIRING"],
+
   },
   {
     id: 7,
-    image: Asset11,
+    image:  log,
     icon: Asset7,
-    title: "Managed Cloud & DevOps",
+    title: "Logistics (New Category)",
     description:
       "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
+    button: ["OTR", "Drayage", "jctrans"],
+
   },
 ];
 
@@ -158,21 +166,14 @@ const OurServices = () => {
                   <img src={service.icon} className="w-6 h-6 filter grayscale-100 brightness-800" />
                     {/* <div className="inline-block ml-2 mt-2 text-2xl">{service.icon}</div> */}
                   </div>
-                  <h3 className="text-xl md:text-3xl font-bold mt-4 ">{service.title}</h3>
+                  <h3 className="text-xl md:text-4xl font-bold mt-4 ">{service.title}</h3>
                 </div>
-                <p className="text-sm md:text-md mt-6 md:mt-9 text-(--white) leading-7 md:leading-8">
+                <p className="text-sm md:text-lg mt-6 md:mt-9 text-(--white) leading-7 md:leading-8">
                   {service.description}
                 </p>
-               
+                {service.button && (
                 <div className="flex flex-wrap mt-6 md:mt-10">
-                  {[
-                    "Branding",
-                    "Logo Design",
-                    "Packaging",
-                    "UI/UX Design",
-                    "Print Media",
-                    "Advertisement",
-                  ].map((btn, i) => (
+               {  service.button.map((btn, i) => (
                     <div
                       key={i}
                       className="custom-gradient rounded-full px-4 py-1 md:px-6 md:py-2 mt-2 mr-2"
@@ -182,10 +183,12 @@ const OurServices = () => {
                     </div>
                   ))}
                 </div>
+            )}
+                
               </div>
             ))}
           </div>
-
+ 
           <div className="w-1/2  relative md:block   hidden  ">
             <div className="sticky top-[20vh]  w-[75%] min-h-[400px] ">
               {services.map((serviceimg, index) => (

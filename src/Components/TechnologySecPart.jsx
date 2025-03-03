@@ -1,6 +1,23 @@
 import React, { useState } from 'react';
 import reacticons from "../assets/TechnologyImage/react.svg"
+import GraphQL from "../assets/TechnologyImage/graphql.svg";
+import TypeScript from "../assets/TechnologyImage/typescript.svg";
+import JQuery from "../assets/TechnologyImage/jquery.svg";
+import D3JS from "../assets/TechnologyImage/d3.svg";
+import AngularJS from "../assets/TechnologyImage/angular.svg";
+import VueJS from "../assets/TechnologyImage/vue.svg";
+import Javascript from "../assets/TechnologyImage/javascript.svg";
+import CSS from "../assets/TechnologyImage/css.svg";
+import HTML from "../assets/TechnologyImage/html.svg";
+
 import nodeicons from "../assets/TechnologyImage/node-js.svg"
+import Ruby from "../assets/TechnologyImage/ruby.svg"
+import DJnago from "../assets/TechnologyImage/django.svg"
+import ExpressJS from "../assets/TechnologyImage/express-js.svg"
+import ASPNet from "../assets/TechnologyImage/asp.svg"
+import Laravel from "../assets/TechnologyImage/laravel.svg"
+import Firebase from "../assets/TechnologyImage/firebase.svg"
+
 
 const TechnologySecPart = () => {
     const [activeSection, setActiveSection] = useState('frontend');
@@ -53,9 +70,9 @@ const TechnologySecPart = () => {
                         <li key={index} className='flex items-end w-[16.66%] p-[10px]'>
                             <div className='bg-(--black) rounded-lg w-full flex items-center justify-center flex-col min-h-[180px]'>
                                 <div className='flex justify-center'>
-                                    <img className='h-8 md:h-auto' src={item.icons} alt={item.TechnologyName} />
+                                    <img className='h-8 md:h-14' src={item.icons} alt={item.TechnologyName} />
                                 </div>
-                                <p className='text-sm md:text:5xl'>{item.TechnologyName}</p>
+                                <h6 className='text-sm md:text-lg font-bold  mt-3'>{item.TechnologyName}</h6>
                             </div>
                         </li>
                     ))}
@@ -86,72 +103,72 @@ export default TechnologySecPart;
 // Frontend data
 const frontend = [
     {
-        icons: reacticons,
-        TechnologyName: "React JS"
+        icons: GraphQL,
+        TechnologyName: "GraphQL"
+    },
+    {
+        icons: TypeScript,
+        TechnologyName: "TypeScript"
+    },
+    {
+        icons: JQuery,
+        TechnologyName: "JQuery"
+    },
+    {
+        icons: D3JS,
+        TechnologyName: "D3 JS"
+    },
+    {
+        icons: AngularJS,
+        TechnologyName: "Angular JS"
     },
     {
         icons: reacticons,
         TechnologyName: "React JS"
     },
     {
-        icons: reacticons,
-        TechnologyName: "React JS"
-    },
-    {
-        icons: reacticons,
-        TechnologyName: "React JS"
-    },
-    {
-        icons: reacticons,
-        TechnologyName: "React JS"
-    },
-    {
-        icons: reacticons,
-        TechnologyName: "React JS"
-    },
-    {
-        icons: reacticons,
-        TechnologyName: "React JS"
+        icons: VueJS,
+        TechnologyName: "Vue JS"
     },   {
-        icons: reacticons,
-        TechnologyName: "React JS"
+        icons: Javascript,
+        TechnologyName: "Javascript"
     },   {
-        icons: reacticons,
-        TechnologyName: "React JS"
+        icons: CSS,
+        TechnologyName: "CSS"
     },   {
-        icons: reacticons,
-        TechnologyName: "React JS"
+        icons: HTML,
+        TechnologyName: "HTML"
     },
 ];
 
 // Backend data
 const backend = [
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
+        icons:nodeicons,
         TechnologyName: "Node JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
-        TechnologyName: "Node JS"
+        icons:Ruby ,
+        TechnologyName: "Ruby"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
-        TechnologyName: "Node JS"
+        icons:DJnago ,
+        TechnologyName: "D Jnago"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
-        TechnologyName: "Node JS"
+        icons:ExpressJS ,
+        TechnologyName: "Express JS"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
-        TechnologyName: "Node JS"
+        icons:ASPNet ,
+        TechnologyName: "ASP .Net"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
-        TechnologyName: "Node JS"
+        icons:Laravel ,
+        TechnologyName: "Laravel"
     },
     {
-        icons: "https://atrixitsolutions.com/wp-content/uploads/2024/08/node-js.svg",
-        TechnologyName: "Node JS"
+        icons: Firebase,
+        TechnologyName: "Firebase"
     },
 ];
