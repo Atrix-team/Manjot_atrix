@@ -196,68 +196,63 @@ const Home = () => {
 
       <div ref={ourServicesRef}>
         {visibleComponents.ourServices ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20 ">Loading Our Services...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20 "></div>}>
             <OurServices />
           </Suspense>
         ) : (
           <div className="text-(--white) text-center py-20">
-            <div className="flex items-center justify-center">
-              <div className="spinner-border animate-spin inline-block w-8 h-8 rounded-full" role="status">
-                <span className="visually-hidden"></span>
-              </div>
-            </div>
-            <div>Loading Our Services...</div>
+           
           </div>
         )}
       </div>
 
       <div ref={countSectionRef}>
         {visibleComponents.countSection ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20">Loading Count Section...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20"></div>}>
             <VideoSection />
           </Suspense>
         ) : (
-          <div className="text-(--white) text-center py-20">Loading Count Section...</div>
+          <div className="text-(--white) text-center py-20"></div>
         )}
       </div>
 
       <div ref={ourSolutionRef}>
         {visibleComponents.ourSolution ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20">Loading Our Solution...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20"></div>}>
             <OurSolution />
           </Suspense>
         ) : (
-          <div className="text-(--white) text-center py-20">Loading Our Solution...</div>
+          <div className="text-(--white) text-center py-20"></div>
         )}
       </div>
 
       <div ref={ourPortfolioRef}>
         {visibleComponents.ourPortfolio ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20">Loading Our Portfolio...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20"></div>}>
             <OurPortfolio />
           </Suspense>
         ) : (
-          <div className="text-(--white) text-center py-20">Loading Our Portfolio...</div>
+          <div className="text-(--white) text-center py-20"></div>
         )}
       </div>
 
       <div ref={technologyRef}>
         {visibleComponents.technology ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20">Loading Technology...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20"></div>}>
             <Technology />
           </Suspense>
         ) : (
-          <div className="text-(--white) text-center py-20">Loading Technology...</div>
+          <div className="text-(--white) text-center py-20"></div>
         )}
       </div>
 
       <div ref={letterMarqueeRef}>
         {visibleComponents.letterMarquee ? (
-          <Suspense fallback={<div className="text-(--white) text-center py-20">Loading Letter Marquee...</div>}>
+          <Suspense fallback={<div className="text-(--white) text-center py-20"></div>}>
             <LetterMarquee />
           </Suspense>
         ) : (
-          <div className="text-(--white) text-center py-20">Loading Letter Marquee...</div>
+          <div className="text-(--white) text-center py-20"></div>
         )}
       </div>
     </>

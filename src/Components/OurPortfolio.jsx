@@ -154,7 +154,7 @@ const OurPortfolio = () => {
                                     <div className="bg-(--black) pt-8 px-8   rounded-t-lg ">
                                         <ul className="flex flex-wrap gap-1">
                                             {item.work.map((workItem, idx) => (
-                                                <li key={idx} className="bg-(--darkblack)   rounded-full px-4 py-1 text-sm hover:bg-(--green)">
+                                                <li key={idx} className="bg-(--darkblack) duration-300  rounded-full px-4 py-1 text-sm hover:bg-(--green)">
                                                     {workItem}
                                                 </li>
                                             ))}
