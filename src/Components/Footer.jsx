@@ -77,9 +77,9 @@ const Footer = () => {
                             Our Services
                         </h4>
 
-                        <ul className="mt-5 text-sm columns-2  space-y-4">
+                        <ul className="mt-5 text-sm columns-2  space-y-4 ">
                             {ourServices.map((item, index) => (
-                                <li key={index}> <a href={item.url}>{item.service_name}</a> </li>
+                                <li className="hover:text-(--blue)" key={index}> <a href={item.url}>{item.service_name}</a> </li>
 
                             ))}
 
@@ -93,7 +93,7 @@ const Footer = () => {
                             <ul className="mt-5 text-sm md:columns-1 columns-2 space-y-4 uppercase ">
 
                                 {quickLinks.map((item, index) => (
-                                    <li key={index}>
+                                    <li className="hover:text-(--blue)" key={index}>
                                         <a href={item.url}>{item.link_name}</a>
                                     </li>
                                 ))}
@@ -111,7 +111,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bg-cs_theme_black  max-w-[90%] mx-auto ">
-                <div className="border-t border-gray-600 py-5 flex justify-between flex-col md:flex-row text-cs_white  max-w-[100%]  ">
+                <div className="border-t border-(--black) py-8 flex justify-between flex-col md:flex-row text-cs_white  max-w-[100%]  ">
                     <div className="">
                         {" "}
                         <p className="text-sm md:text-left text-center">© Copyright 2025 Apatrix IT Solution | All Right Reserved.</p>
