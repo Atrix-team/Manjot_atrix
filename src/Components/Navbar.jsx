@@ -1,6 +1,5 @@
-
 import React from 'react';
-import Logo from "../assets/White.svg"
+import Logo from "/White.svg"
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, useLocation } from "react-router-dom"
@@ -8,10 +7,11 @@ import Button from './Button';
 
 const navigation = [
   { name: 'Home', path: '/', current: true },
-  { name: 'About Us', path: '/about', current: false },
-  { name: 'Our Services', path: '/services', current: false },
-  { name: 'FAQ’s', path: '/faqs', current: false },
-  { name: 'Contact Us', path: '/contact', current: false },
+  { name: 'About Us', path: '#', current: false },
+  { name: 'Our Services', path: '#', current: false },
+  { name: 'Portfolio', path: '#', current: false },
+  { name: 'Blog', path: '#', current: false },
+  { name: 'Contact Us', path: '#', current: false },
 ]
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden lg:ml-6 lg:block">
+          <div className="hidden lg:ml-6 xl:block ">
             <div className="flex space-x-4">
               {navigation.map((item) => (
                 <Link
@@ -48,11 +48,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 lg:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden">
+          <div className="absolute inset-y-0 right-0 xl:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden">
             <Button className="relative" mybtn={"Let's Talk"} />
           </div>
 
-          <div className="left-0 flex items-center justify-end lg:hidden">
+          <div className="left-0 flex items-center justify-end xl:hidden">
             <DisclosureButton className="group relative inline-flex items-center justify-end rounded-md p-2 text-(--white) bg-(--navbarUlbgcolor) hover:bg-(--black) hover:text-(--white) focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <DisclosurePanel className="lg:hidden ">
+      <DisclosurePanel className="xl:hidden ">
         <div className="space-y-1 px-2 pt-2 pb-3 bg-(--navbarUlbgcolor) z-50">
           {navigation.map((item) => (
             <DisclosureButton

@@ -12,7 +12,7 @@ import dev from "../assets/ServicesImage/dev.svg";
 import log from "../assets/ServicesImage/log.svg";
 import marketing from "../assets/ServicesImage/marketing.svg";
 import staffing from "../assets/ServicesImage/staffing.svg";
-import vfx from "../assets/ServicesImage/vfx.svg";
+import visual from "../assets/ServicesImage/visual.svg";
 import video from "../assets/ServicesImage/video.svg";
 
 import "../CSS/one.css";
@@ -50,8 +50,8 @@ const services = [
   },
   {
     id: 4,
-    image: vfx,
-    icon: Asset4,
+    image: visual,
+    icon: Asset5,
     title: "Visual Effects",
     description:
       "Looking to bring your ideas to life with stunning visual effects? At Apatrix IT Solutions, we specialize in creating eye-catching VFX that captivate and engage your audience. Whether it's for film, advertisements, or digital media, our expert team delivers cutting-edge effects that enhance your project and leave a lasting impact. Transform your vision into reality with Apatrix IT Solutions today and make your visuals unforgettable!",
@@ -61,7 +61,7 @@ const services = [
   {
     id: 5,
     image: video,
-    icon: Asset5,
+    icon: Asset4,
     title: "Photo/Videography",
     description:
       "Your moments deserve the spotlight! At Apatrix IT Solutions, we specialize in photo and videography that showcases your vision in the most stunning way. From events and branding to creative projects, our team ensures every shot is perfect. With high-quality photography and dynamic videography, we make your ideas come to life. Ready to capture the perfect shot? Partner with Apatrix IT Solutions and let’s create something amazing together!",
@@ -81,7 +81,7 @@ const services = [
     id: 7,
     image:  log,
     icon: Asset7,
-    title: "Logistics (New Category)",
+    title: "Logistics ",
     description:
       "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
     button: ["OTR", "Drayage", "jctrans"],
@@ -128,10 +128,10 @@ const OurServices = () => {
         <div className=" py-14 md:py-32 ">
         
         <div className="md:flex flex-wrap justify-start gap-10 ">
-        <h2 className=" text-4xl md:text-6xl font-bold">Our Services</h2>
+        <h2 className=" text-4xl md:text-6xl font-bold">Our <br/>Services</h2>
 
 
-                    <div className='w-full max-w-[450px] mt-14'>
+                    <div className='w-full max-w-[550px] mt-14'>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477 65">
                             <path fill="#2f2f2f" d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM475 3L475.255 3.42984L476.82 2.5H475V3ZM438.668 65L441.872 60.197L436.111 59.8239L438.668 65ZM3 3.5H475V2.5H3V3.5ZM474.745 2.57016C459.928 11.3742 441.341 27.8789 438.461 60.47L439.457 60.5581C442.3 28.3895 460.613 12.1303 475.255 3.42984L474.745 2.57016Z"></path>
                         </svg>
@@ -146,7 +146,7 @@ const OurServices = () => {
                     </div>
                 </div>
         
-        <div className="flex flex-col md:flex-row   gap-10  mt-10  md:mt-20 ">
+        <div className="flex flex-col md:flex-row   gap-2  mt-10  md:mt-20 ">
 
           <div className="w-full md:w-1/2  ">
             {services.map((service) => (
@@ -176,7 +176,7 @@ const OurServices = () => {
                {  service.button.map((btn, i) => (
                     <div
                       key={i}
-                      className="custom-gradient rounded-full px-4 py-1 md:px-6 md:py-2 mt-2 mr-2"
+                      className="custom-gradient duration-300 rounded-full px-4 py-1 md:px-6 md:py-2 mt-2 mr-2"
 
                     >
                       {btn}
@@ -190,7 +190,7 @@ const OurServices = () => {
           </div>
  
           <div className="w-1/2  relative md:block   hidden  ">
-            <div className="sticky top-[20vh]  w-[75%] min-h-[400px] ">
+            <div className="sticky top-[25vh]  w-[75%] min-h-[400px] ">
               {services.map((serviceimg, index) => (
                 <img
                   key={serviceimg.id}

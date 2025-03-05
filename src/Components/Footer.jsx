@@ -1,119 +1,138 @@
-import React from 'react'
-import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
-import { RxArrowTopRight } from "react-icons/rx";
+import React from "react";
+import logo from "../assets/MainLogo.svg";
+import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Logo from "../assets/Main Logo.svg"
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import Button from "./Button";
+
+
+const ourServices = [
+    { service_name: "3D Animation", url: "#" },
+    { service_name: "CRM Development", url: "#" },
+    { service_name: "Web Development", url: "#" },
+    { service_name: "MLM Software", url: "#" },
+    { service_name: "Graphic Designing", url: "#" },
+    { service_name: "Metaverse Development", url: "#" },
+    { service_name: "Digital Marketing", url: "#" },
+    { service_name: "App Development", url: "#" },
+    { service_name: "UI/UX Design & Development", url: "#" },
+    { service_name: "Salesforce Development", url: "#" },
+    { service_name: "AI Development", url: "#" },
+    { service_name: "Software Development", url: "#" },
+    { service_name: "IoT Development", url: "#" },
+    { service_name: "Hire Developers", url: "#" },
+    { service_name: "SAP Business One", url: "#" },
+    { service_name: "AEM Development", url: "#" },
+    { service_name: "Unity 3D Game Development", url: "#" },
+]
+const quickLinks = [
+    { link_name: "Home", url: "#" },
+    { link_name: "About", url: "#" },
+    { link_name: "Our Blog", url: "#" },
+    { link_name: "Our Portfolio", url: "#" },
+    { link_name: "FAQ", url: "#" },
+    { link_name: "Career", url: "#" },
+    { link_name: "Contact Us", url: "#" },
+]
+
+
+
 
 const Footer = () => {
     return (
-        <footer className='bg-(--darkblack) text-(--white)  mt-18'>
+        <footer className="bg-cs_theme_black">
+            <div className=" max-w-[90%] mx-auto flex flex-wrap md:pt-28 pt-14 md:pb-24 pb-10 ">
+                <div className=" md:w-1/4 md:pr-16 ">
+                    <div className=" h-14 w-auto md:m-0  flex ">
 
-            <div className='container mx-auto max-w-[1700px] w-[90%]'>
-                <div className=' flex  flex-wrap   justify-between  gap-1   '>
-
-                    <div className='mt-10'>
-                        <img src={Logo} className='w-auto h-20 ' />
-                        <div className='mt-5'>
-                            <h5 className='text-(--blue)  text-xl font-bold'>Address</h5>
-                            <p className='lg:w-96 w-80'>PLOT C – 203 , PHASE – 8 B, MOHALI, MOHALI, SAS Nagar , 26-Punjab, 91-INDIA, 160070</p>
-                        </div>
-                        <div className='mt-5'>
-                            <h5 className='text-(--blue)  text-xl font-bold'>Email</h5>
-                            <p>info@apatrixitsolutions.com</p>
-                        </div>
-
-                        <div className='mt-5'>
-                            <h5 className='text-(--blue) text-xl font-bold'>Social Just You Connected Us!</h5>
-                            <ul>
-                                <li className="flex relative  mt-3    space-x-4 z-10">
-                                    <div className="border border-(--black) bg-(--black) hover:bg-gradient-to-r from-(--blue) to-(--green)   p-2 rounded-full transition-colors text-xl cursor-pointer">
-                                        <FaFacebookF />
-                                    </div>
-                                    <div className="border border-(--black) 
-                                    p-2 rounded-full transition-colors text-xl cursor-pointer">
-                                        <FaXTwitter />
-                                    </div>
-                                    <div className="border border-(--black) bg-(--black) p-2 rounded-full transition-colors text-xl cursor-pointer">
-                                        <FaLinkedinIn />
-                                    </div>
-                                    <div className="border border-(--black) bg-(--black) p-2 rounded-full transition-colors text-xl cursor-pointer">
-                                        <FaInstagram />
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <img src={logo} alt="" />
                     </div>
-
-                    <div className='flex flex-col space-y-3 mt-10'>
-                        <h4 className="text-3xl  inline-block font-bold  ">Our Services</h4>
-                        <div className='flex  col-auto   gap-16'>
-
-                            <ul className=" space-y-3 mt-3">
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">3D Animation</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">CRM Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Web Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">  MLM Software</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Graphic Designing</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Metaverse Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Banking Software Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Digital Marketing</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">App Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">UI/UX Design & Development</li>
+                    <h4 className=" text-(--blue) mt-5 font-bold text-lg">Address</h4>
+                    <p className="  uppercase" > PLOT C – 203 , PHASE – 8 B, MOHALI, MOHALI, SAS Nagar , 26-Punjab, 91-INDIA, 160070</p>
 
 
+                    <h4 className="  text-(--blue) mt-5 font-bold text-lg">Email</h4>
+                    <p className="break-words">info@apatrixitsolutions.com</p>
 
-                            </ul>
-                            <ul className=" space-y-3 mt-3">
-
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Salesforce Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">AI Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Software Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">IoT Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Hire Developers</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Real Estate App Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">SAP Business One</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">AEM Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">Unity 3D Game Development</li>
-                                <li className=" transition-colors cursor-pointer hover:text-(--blue)">VFX Studio</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <ul className=" space-y-3 mt-10">
-                        <h4 className="text-3xl  inline-block font-bold">Quick Links</h4>
-
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue) mt-3">Home</li>
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue)">About Us</li>
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue)">Our Blog</li>
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue)">Our Portfolio</li>
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue)">FAQ</li>
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue)">Career</li>
-                        <li className=" transition-colors cursor-pointer hover:text-(--blue)">Contact Us</li>
-
-                    </ul>
-
-                    <ul className="flex flex-col space-y-3  w-full max-w-[400px] mt-10">
-                        <h4 className="text-3xl  inline-block font-bold ">We are dedicated to find the right solution for you.</h4>
-
-                        <li className=" transition-colors cursor-pointer underline decoration-2 font-bold text-xl flex items-center gap-1 mt-8">Get in Touch <RxArrowTopRight className='text-2xl' /></li>
-
-
+                    <h4 className=" text-(--blue) mt-5 font-bold text-lg  ">Social Just You Connected Us!</h4>
+                    <ul className=" flex gap-3 mt-3 md:justify-start  ">
+                        <li className="w-8 h-8 border border-(--black)  bg-(--black) hover:bg-gradient-to-r from-(--blue) to-(--green) flex justify-center items-center rounded-full cursor-pointer ">
+                            <FaFacebookF />
+                        </li>
+                        <li className="w-8 h-8 border border-(--black)  bg-(--black) hover:bg-gradient-to-r from-(--blue) to-(--green) flex justify-center items-center rounded-full cursor-pointer ">
+                            <FaXTwitter />
+                        </li>
+                        <li className="w-8 h-8 border border-(--black)  bg-(--black) hover:bg-gradient-to-r from-(--blue) to-(--green) flex justify-center items-center rounded-full cursor-pointer">
+                            <FaLinkedinIn />
+                        </li>
+                        <li className="w-8 h-8 border border-(--black)  bg-(--black) hover:bg-gradient-to-r from-(--blue) to-(--green) flex justify-center items-center rounded-full cursor-pointer">
+                            <FaInstagram />
+                        </li>
                     </ul>
                 </div>
+                <div className="md:w-3/4 flex flex-wrap ">
+                    <div className="w-full md:w-3/6 uppercase ">
+                        <h4 className=" mt-10 md:mt-0 text-2xl font-bold inline-block pb-2 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-cs_white after:to-cs_theme_black">
+                            Our Services
+                        </h4>
 
-            
+                        <ul className="mt-5 text-sm columns-2  space-y-4">
+                            {ourServices.map((item, index) => (
+                                <li key={index}> <a href={item.url}>{item.service_name}</a> </li>
 
-            <div className=" mt-28 pt-10 pb-10  border-t border-(--black)   md:flex  flex-wrap md:justify-between items-center ">
-                <p>© Copyright 2025.  Apatrix  IT Solutions | All Right Reserved.</p>
-                <ul className='flex flex-wrap md:justify-end items-center gap-3 md:pt-0 pt-5'>
-                    <li className='border-r pr-4 '>Support Policy</li>
-                    <li className='border-r pr-4 '>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                </ul>
+                            ))}
+
+                        </ul>
+                    </div>
+                    <div className="md:w-2/4 flex flex-col md:flex-row ">
+                        <div className="w-full md:w-1/3  ">
+                            <h4 className="  mt-10 md:mt-0 text-2xl font-bold inline-block pb-2 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-cs_white after:to-cs_theme_black">
+                                Quick Links
+                            </h4>
+                            <ul className="mt-5 text-sm md:columns-1 columns-2 space-y-4 uppercase ">
+
+                                {quickLinks.map((item, index) => (
+                                    <li key={index}>
+                                        <a href={item.url}>{item.link_name}</a>
+                                    </li>
+                                ))}
+
+                            </ul>
+                        </div>
+                        <div className="mt-10 md:mt-0 w-full md:w-2/3   lg:pl-7 pl-0">
+                            <h2 className=" text-xl md:text-3xl font-bold">We are dedicated to find the right solution for you.</h2>
+                            <div className=" mt-5 ">
+                                {/* <CsButton mybtn="Get in Touch"></CsButton> */}
+                                <Button mybtn="Get in Touch"></Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div className="bg-cs_theme_black  max-w-[90%] mx-auto ">
+                <div className="border-t border-gray-600 py-5 flex justify-between flex-col md:flex-row text-cs_white  max-w-[100%]  ">
+                    <div className="">
+                        {" "}
+                        <p className="text-sm md:text-left text-center">© Copyright 2025 Apatrix IT Solution | All Right Reserved.</p>
+                    </div>
+                    <ul className=" flex flex-wrap gap-4 text-sm md:justify-end justify-center md:mt-0 mt-2 ">
+                        <li>
+                            <p className="border-r pr-4 text-sm">Support Policy </p>
+                        </li>
+                        <li>
+                            <a href="#" className="border-r pr-4">
+                                Terms & Conditions{" "}
+                            </a>
+                        </li>
+                        <li className="">
+                            <a href="#"> Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;

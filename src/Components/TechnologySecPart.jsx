@@ -11,7 +11,7 @@ import CSS from "../assets/TechnologyImage/css.svg";
 import HTML from "../assets/TechnologyImage/html.svg";
 
 import nodeicons from "../assets/TechnologyImage/node-js.svg"
-import Ruby from "../assets/TechnologyImage/ruby.svg"
+import Ruby from "../assets/TechnologyImage/rubys.svg"
 import DJnago from "../assets/TechnologyImage/django.svg"
 import ExpressJS from "../assets/TechnologyImage/express-js.svg"
 import ASPNet from "../assets/TechnologyImage/asp.svg"
@@ -38,7 +38,7 @@ const TechnologySecPart = () => {
                 }
                 `}
             </style>
-<div className='container mx-auto  max-w-[1280px] w-[90%]'>
+<div className=''>
             <div className='flex justify-center gap-3'>
                 <h6
                     className={`bg-(--black) md:px-5 md:py-2 text-lg rounded-full font-bold md:w-32 w-28  pl-3 py-1 cursor-pointer relative ${

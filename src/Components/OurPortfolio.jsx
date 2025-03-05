@@ -106,7 +106,7 @@ const OurPortfolio = () => {
                 </div>
 
 
-                <div className="p-8 mt-20 "  >
+                <div className=" mt-20 "  >
                     <style>
                         {`
                 .slick-arrow {
@@ -161,7 +161,7 @@ const OurPortfolio = () => {
                                         </ul>
                                         <div className='relative'>
                                             <img src={item.img} alt={item.title} className="w-full h-72 object-cover mt-5" />
-                                            <button className='bg-(--black)  rounded-full px-2 py-2 text-3xl absolute -bottom-5 right-10 cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
+                                            <button className='bg-(--black)  rounded-full px-2 py-2 text-3xl absolute -bottom-5 right-10 hover:rotate-45 transform duration-300  cursor-pointer hover:bg-(--green)'><MdOutlineArrowOutward /></button>
                                         </div>
                                     </div>
                                     <div className="px-12 py-8  ">
