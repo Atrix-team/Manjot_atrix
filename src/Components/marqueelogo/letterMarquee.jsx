@@ -8,7 +8,7 @@ const LetterMarquee = () => {
     const letterMarquee = [
         {
             icons: svgIocns,
-            title: "WELCOME TO ATRIX IT SOLUTIONS",
+            title: "WELCOME TO APATRIX IT SOLUTIONS",
         },
         {
             icons: svgIocns,
