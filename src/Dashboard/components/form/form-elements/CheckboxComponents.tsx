@@ -9,15 +9,21 @@ export default function CheckboxComponents() {
   const [isCheckedTwo, setIsCheckedTwo] = useState(true);
   const [isCheckedDisabled, setIsCheckedDisabled] = useState(false);
   return (
-    <ComponentCard title="Checkbox">
-      <div className="flex items-center gap-4">
+    <ComponentCard title="category">
+      <div className=" items-center gap-4 space-y-5">
         <div className="flex items-center gap-3">
           <Checkbox checked={isChecked} onChange={setIsChecked} />
           <span className="block text-sm font-medium text-gray-700 dark:text-gray-400">
-            Default
+            Forntend
           </span>
         </div>
         <div className="flex items-center gap-3">
+          <Checkbox checked={isChecked} onChange={setIsChecked} />
+          <span className="block text-sm font-medium text-gray-700 dark:text-gray-400">
+            Backend
+          </span>
+        </div>
+        {/* <div className="flex items-center gap-3">
           <Checkbox
             checked={isCheckedTwo}
             onChange={setIsCheckedTwo}
@@ -31,7 +37,7 @@ export default function CheckboxComponents() {
             disabled
             label="Disabled"
           />
-        </div>
+        </div> */}
       </div>
     </ComponentCard>
   );

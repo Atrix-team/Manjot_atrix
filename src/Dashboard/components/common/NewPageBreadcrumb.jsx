@@ -1,16 +1,13 @@
 import React from "react";
 
 import { Link } from "react-router";
-import Button from "../ui/button/Button";
 
-interface BreadcrumbProps {
-  pageTitle: string;
-}
 
-const PageBreadcrumb: React.FC<BreadcrumbProps> = ({ pageTitle }) => {
+
+const NewPageBreadcrumb = ({ pageTitle }) => {
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 mb-20">
+    <div className="flex flex-wrap items-center justify-between gap-3 mb-10">
       <div className="flex gap-5">
       <h2
         className="text-4xl font-semibold text-gray-800 dark:text-white/90 "
@@ -18,17 +15,7 @@ const PageBreadcrumb: React.FC<BreadcrumbProps> = ({ pageTitle }) => {
       >
         {pageTitle}
         </h2>
-        <div className="cursor-pointer">
-                <Link to="/AddNewTechnology"><Button
-                size="sm"
-                variant="outline"
-                // startIcon={<span>🚀</span>}
-                // onClick={() => alert('New Technology Added!')}
-                className="cursor-pointer"
-            >
-                             New Add Technology
-                           </Button></Link>
-                           </div>
+
       
       </div>
       <nav>
@@ -66,4 +53,4 @@ const PageBreadcrumb: React.FC<BreadcrumbProps> = ({ pageTitle }) => {
   );
 };
 
-export default PageBreadcrumb;
+export default NewPageBreadcrumb;

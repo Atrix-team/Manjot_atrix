@@ -1,5 +1,6 @@
 import React from "react";
-
+import { FiPlus } from "react-icons/fi";
+import { Link } from "react-router-dom";
 interface ComponentCardProps {
   title: string;
   children: React.ReactNode;
@@ -7,7 +8,7 @@ interface ComponentCardProps {
   desc?: string; // Description text
 }
 
-const ComponentCard: React.FC<ComponentCardProps> = ({
+const ComponentCategory: React.FC<ComponentCardProps> = ({
   title,
   children,
   className = "",
@@ -18,15 +19,14 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
       className={`rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] ${className}`}
     >
       {/* Card Header */}
-      <div className="px-6 py-5">
+      <div className="px-6 py-5 flex justify-between items-center">
         <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
           {title}
         </h3>
-        {desc && (
-          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-            {desc}
-          </p>
-        )}
+       
+       <div>
+        <Link to="/CategoryTechnology"><FiPlus  className="cursor-pointer"/></Link>
+       </div>
       </div>
 
       {/* Card Body */}
@@ -37,4 +37,4 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
   );
 };
 
-export default ComponentCard;
+export default ComponentCategory;

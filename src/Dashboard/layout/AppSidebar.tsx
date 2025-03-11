@@ -1,22 +1,11 @@
 import React,{ useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
-  FcGrid, // Grid icon
-  FcCalendar, // Calendar icon
-  FcBusinessman, // User profile icon
-  FcList, // List icon
- 
-  FcDocument, // Page icon
-  FcPieChart, // Pie chart icon
-  FcBriefcase, // Box cube icon
-  FcSettings, // Plug-in icon
-  FcExpand, // Chevron down icon
   FcMenu, // Horizontal dots icon
 } from "react-icons/fc"; // Import icons from react-icons/fc
 import { MdOutlineDashboard } from "react-icons/md";
 import { useSidebar } from "../context/SidebarContext";
 import SidebarWidget from "./SidebarWidget";
-import Logo from "./Image/MainLogo.svg";
 import { FaUser } from "react-icons/fa";
 import { FaWpforms } from "react-icons/fa6";
 import { TbTableShare } from "react-icons/tb";
@@ -26,6 +15,8 @@ import { BsBox } from "react-icons/bs";
 import { RiSettings3Line } from "react-icons/ri";
 import { FaChevronDown } from "react-icons/fa6";
 import { GrTechnology } from "react-icons/gr";
+import Logo from "./Image/MainLogo.svg";
+import favIcons from "../../assets/favIcon.svg";
 type NavItem = {
   name: string;
   icon: React.ReactNode;
@@ -34,21 +25,28 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  {
-    icon: <FcGrid />, // Grid icon
-    name: "Dashboard",
-    // subItems: [{ name: "Ecommerce", path: "/", pro: false }],
-  },
+  // {
+  //   icon: <FcGrid />, 
+  //   name: "Dashboard",
+  //   subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+  // },
 
   {
     icon: <MdOutlineDashboard />, // Calendar icon
     name: "Dashboard",
-    path: "/Dashboard",
+    path: "/DashboardHome",
   },
+
   {
-    icon: <GrTechnology />, // User profile icon
     name: "Technology",
-    path: "/Technology",
+    icon: <GrTechnology />, // List icon
+    subItems: [
+      { name: "All Technology", path: "/Technology", pro: false },
+      { name: "Category", path: "/CategoryTechnology", pro: false },
+      { name: "Add New Technology ", path: "/AddNewTechnology", pro: false },
+
+
+    ],
   },
   {
     icon: <FaUser />, // User profile icon
@@ -181,9 +179,9 @@ const AppSidebar: React.FC = () => {
           {nav.subItems ? (
             <button
               onClick={() => handleSubmenuToggle(index, menuType)}
-              className={`flex item-center gap-3 w-[100%] relative rounded-md px-3 py-2 text-md hover:bg-gray-800 font-bold menu-item group ${
+              className={`flex item-center gap-3 w-[100%] relative rounded-md px-3 py-2 text-md hover:bg-[#1816169f] font-bold menu-item group ${
                 openSubmenu?.type === menuType && openSubmenu?.index === index
-                  ? "menu-item-active"
+                  ? "bg-[#1816169f]"
                   : "menu-item-inactive"
               } cursor-pointer ${
                 !isExpanded && !isHovered
@@ -201,7 +199,7 @@ const AppSidebar: React.FC = () => {
                 {nav.icon}
               </span>
               {(isExpanded || isHovered || isMobileOpen) && (
-                <span className="menu-item-text">{nav.name}</span>
+                <span className="menu-item-text ">{nav.name}</span>
               )}
               {(isExpanded || isHovered || isMobileOpen) && (
                 <FaChevronDown // Chevron down icon
@@ -218,8 +216,8 @@ const AppSidebar: React.FC = () => {
             nav.path && (
               <Link
                 to={nav.path}
-                className={`flex item-center gap-3 w-[100%] relative rounded-md px-3 py-2 text-md hover:bg-gray-800 font-bold menu-item group ${
-                  isActive(nav.path) ? "menu-item-active" : "menu-item-inactive"
+                className={`flex item-center gap-3 w-[100%] relative rounded-md px-3 py-2 text-md hover:bg-[#1816169f] font-bold menu-item group ${
+                  isActive(nav.path) ? "bg-[#1816169f]" : "menu-item-inactive"
                 }`}
               >
                 <span
@@ -255,9 +253,9 @@ const AppSidebar: React.FC = () => {
                   <li key={subItem.name}>
                     <Link
                       to={subItem.path}
-                      className={`flex menu-dropdown-item ${
+                      className={`flex menu-dropdown-item hover:bg-[#1816169f] px-3 py-2 rounded-md ${
                         isActive(subItem.path)
-                          ? "menu-dropdown-item-active"
+                          ? "bg-[#1816169f]"
                           : "menu-dropdown-item-inactive"
                       }`}
                     >
@@ -267,7 +265,7 @@ const AppSidebar: React.FC = () => {
                           <span
                             className={`ml-auto ${
                               isActive(subItem.path)
-                                ? "menu-dropdown-badge-active"
+                                ? "bg-[#1816169f]"
                                 : "menu-dropdown-badge-inactive"
                             } menu-dropdown-badge`}
                           >
@@ -299,7 +297,7 @@ const AppSidebar: React.FC = () => {
 
   return (
     <aside
-      className={`fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white dark:bg-gray-900 dark:border-gray-800  h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 
+      className={`fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white dark:bg-(--black) dark:border-gray-700  h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 
         ${
           isExpanded || isMobileOpen
             ? "w-[290px]"
@@ -313,13 +311,14 @@ const AppSidebar: React.FC = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`py-3 flex ${
+        className={`py-8  flex justify-center ${
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
         }`}
       >
         <Link to="/">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
+            <div className=" px-10">
               <img
                 className="dark:hidden"
                 src={Logo}
@@ -334,23 +333,26 @@ const AppSidebar: React.FC = () => {
                 width={150}
                 height={40}
               />
+              </div>
             </>
           ) : (
+            <div className="">
             <img
-              src={Logo}
+              src={favIcons}
               alt="Logo"
-              width={32}
-              height={32}
+              width={50}
+              height={80}
             />
+            </div>
           )}
         </Link>
       </div>
-      <div className="flex flex-col overflow-y-auto duration-300 ease-linear no-scrollbar mt-5">
+      <div className="flex flex-col overflow-y-auto duration-300 ease-linear no-scrollbar mt-">
         <nav className="mb-6">
           <div className="flex flex-col gap-4">
             <div>
               <h2
-                className={`text-xs uppercase flex leading-[20px] text-gray-400 ${
+                className={`text-xs mb-4 uppercase flex leading-[20px] text-gray-400 ${
                   !isExpanded && !isHovered
                     ? "lg:justify-center"
                     : "justify-start"
@@ -375,7 +377,7 @@ const AppSidebar: React.FC = () => {
                 {isExpanded || isHovered || isMobileOpen ? (
                   "Others"
                 ) : (
-                  <FcMenu /> // Horizontal dots icon
+                  <FcMenu  className="size-6"/> // Horizontal dots icon
                 )}
               </h2>
               {renderMenuItems(othersItems, "others")}

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   Table,
@@ -6,10 +5,9 @@ import {
   TableCell,
   TableHeader,
   TableRow,
-} from "../../ui/table";
-import { BiEdit } from "react-icons/bi";
-import { MdDelete } from "react-icons/md";
-import Checkbox from "../../form/input/Checkbox";
+} from "../../components/ui/table";
+
+import Checkbox from "../../components/form/input/Checkbox";
 
 interface Order {
   id: number;
@@ -20,7 +18,7 @@ interface Order {
     images: string[];
   };
   status: string;
-  budget: string;
+  count: number;
 }
 
 
@@ -34,7 +32,7 @@ const tableData: Order[] = [
     team: {
       images: ["/images/user/user-22.jpg"],
     },
-
+    count:"0"
 
   },
   {
@@ -45,11 +43,12 @@ const tableData: Order[] = [
     team: {
       images: ["/images/user/user-22.jpg"],
     },
+    count:"0"
 
   },
 ];
 
-export default function BasicTableOne() {
+export default function CategoryTable() {
   const [selectedRows, setSelectedRows] = useState<number[]>([]);
 
   // Handle individual row selection
@@ -91,33 +90,28 @@ export default function BasicTableOne() {
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Title
+                  Name
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Category
+                  Description
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Images
+                  Slug
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Date
+                  Count
                 </TableCell>
 
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
-                >
-                  Action
-                </TableCell>
+               
               </TableRow>
             </TableHeader>
 
@@ -145,33 +139,13 @@ export default function BasicTableOne() {
                     {order.Category}
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                    <div className="flex -space-x-2">
-                      {order.team.images.map((teamImage, index) => (
-                        <div
-                          key={index}
-                          className="w-6 h-6 overflow-hidden border-2 border-white rounded-full dark:border-gray-900"
-                        >
-                          <img
-                            width={24}
-                            height={24}
-                            src={teamImage}
-                            alt={`Team member ${index + 1}`}
-                            className="w-full size-6"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </TableCell>
-                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     {order.projectName}
                   </TableCell>
-
-                  <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">
-                    <div className="flex gap-2">
-                      <BiEdit className="cursor-pointer text-gray-500 hover:text-gray-700 text-2xl" />
-                      <MdDelete className="cursor-pointer text-gray-500 hover:text-red-500 text-2xl" />
-                    </div>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                    {order.count}
                   </TableCell>
+
+                 
                 </TableRow>
               ))}
             </TableBody>
