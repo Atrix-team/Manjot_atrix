@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/MainLogo.svg";
+import logo from "../assets/ais-logo-3.png";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -44,7 +44,7 @@ const Footer = () => {
         <footer className="bg-cs_theme_black">
             <div className=" max-w-[90%] mx-auto flex flex-wrap md:pt-28 pt-14 md:pb-24 pb-10 ">
                 <div className=" md:w-1/4 md:pr-16 ">
-                    <div className=" h-14 w-auto md:m-0  flex ">
+                    <div className=" h-16 md:h-32 w-auto md:m-0  flex ">
 
                         <img src={logo} alt="" />
                     </div>
@@ -53,7 +53,7 @@ const Footer = () => {
 
 
                     <h4 className="  text-(--blue) mt-5 font-bold text-lg">Email</h4>
-                    <p className="break-words">info@apatrixitsolutions.com</p>
+                    <p className="break-words">info@atrixitsolutions.com</p>
 
                     <h4 className=" text-(--blue) mt-5 font-bold text-lg  ">Social Just You Connected Us!</h4>
                     <ul className=" flex gap-3 mt-3 md:justify-start  ">
@@ -114,7 +114,7 @@ const Footer = () => {
                 <div className="border-t border-(--black) py-8 flex justify-between flex-col md:flex-row text-cs_white  max-w-[100%]  ">
                     <div className="">
                         {" "}
-                        <p className="text-sm md:text-left text-center">© Copyright 2025 Apatrix IT Solution | All Right Reserved.</p>
+                        <p className="text-sm md:text-left text-center">© Copyright 2025 Atrix IT Solutions | All Right Reserved.</p>
                     </div>
                     <ul className=" flex flex-wrap gap-4 text-sm md:justify-end justify-center md:mt-0 mt-2 ">
                         <li>

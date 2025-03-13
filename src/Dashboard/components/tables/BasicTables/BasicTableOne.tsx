@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -10,12 +9,14 @@ import {
 import { BiEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
 import Checkbox from "../../form/input/Checkbox";
+import axios from "axios"; // Import axios
+import { useNavigate } from "react-router-dom";
 
 interface Order {
   id: number;
   name: string;
   Category: string;
-  projectName: string;
+  Date: string;
   team: {
     images: string[];
   };
@@ -23,34 +24,36 @@ interface Order {
   budget: string;
 }
 
-
-const tableData: Order[] = [
-  {
-    id: 1,
-
-    name: "React Js",
-    Category: "Frontend",
-    projectName: "06/03/2025",
-    team: {
-      images: ["/images/user/user-22.jpg"],
-    },
-
-
-  },
-  {
-    id: 2,
-    name: "Node Js",
-    Category: "Backend",
-    projectName: "07/03/2025",
-    team: {
-      images: ["/images/user/user-22.jpg"],
-    },
-
-  },
-];
-
 export default function BasicTableOne() {
   const [selectedRows, setSelectedRows] = useState<number[]>([]);
+  const [tableData, setTableData] = useState<Order[]>([]); // State to store fetched data
+const navigate = useNavigate()
+  // Fetch data from the API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5300/technology/get");
+        const technologies = response.data.Technology;
+
+        // Map the fetched data to the tableData format
+        const mappedData = technologies.map((tech, index) => ({
+          id: index + 1,
+          name: tech.title,
+          Category: tech.category,
+          Date: new Date(tech.updatedAt).toLocaleDateString(), // Format date
+          team: {
+            images: [tech.image?.image || "/images/user/user-22.jpg"], // Use the image URL or a fallback
+          },
+        }));
+
+        setTableData(mappedData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   // Handle individual row selection
   const handleRowSelect = (id: number) => {
@@ -70,6 +73,11 @@ export default function BasicTableOne() {
     }
   };
 
+  const handleEdit = (technology) => {
+    navigate("/AddNewTechnology", {
+      state: { technology }, // Pass the entire technology object as state
+    });
+  };
   return (
     <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/[0.05] dark:bg-white/[0.03]">
       <div className="max-w-full overflow-x-auto">
@@ -82,10 +90,10 @@ export default function BasicTableOne() {
                   isHeader
                   className="px-6 py-4 font-medium text-gray-500 text-start text-theme-xl dark:text-gray-400"
                 >
-                  <Checkbox checked={selectedRows.length === tableData.length}
-                    onChange={handleSelectAll} />
-
-
+                  <Checkbox
+                    checked={selectedRows.length === tableData.length}
+                    onChange={handleSelectAll}
+                  />
                 </TableCell>
                 <TableCell
                   isHeader
@@ -111,7 +119,6 @@ export default function BasicTableOne() {
                 >
                   Date
                 </TableCell>
-
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
@@ -126,9 +133,10 @@ export default function BasicTableOne() {
               {tableData.map((order) => (
                 <TableRow key={order.id}>
                   <TableCell className="px-5 py-4 sm:px-6 text-start">
-                    <Checkbox checked={selectedRows.includes(order.id)}
-                      onChange={() => handleRowSelect(order.id)} />
-
+                    <Checkbox
+                      checked={selectedRows.includes(order.id)}
+                      onChange={() => handleRowSelect(order.id)}
+                    />
                   </TableCell>
                   <TableCell className="px-5 py-4 sm:px-6 text-start">
                     <div className="flex items-center gap-3">
@@ -136,11 +144,9 @@ export default function BasicTableOne() {
                         <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
                           {order.name}
                         </span>
-
                       </div>
                     </div>
                   </TableCell>
-              
                   <TableCell className="px-6 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     {order.Category}
                   </TableCell>
@@ -149,26 +155,25 @@ export default function BasicTableOne() {
                       {order.team.images.map((teamImage, index) => (
                         <div
                           key={index}
-                          className="w-6 h-6 overflow-hidden border-2 border-white rounded-full dark:border-gray-900"
+                          className="w-12 h-12 overflow-hidden "
                         >
                           <img
-                            width={24}
-                            height={24}
-                            src={teamImage}
+                            width={20}
+                            height={20}
+                            src={`http://localhost:5300${teamImage}`} // Use the full image URL
                             alt={`Team member ${index + 1}`}
-                            className="w-full size-6"
+                            className="w-full size-11 "
                           />
                         </div>
                       ))}
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                    {order.projectName}
+                    {order.Date}
                   </TableCell>
-
                   <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">
                     <div className="flex gap-2">
-                      <BiEdit className="cursor-pointer text-gray-500 hover:text-gray-700 text-2xl" />
+                      <BiEdit className="cursor-pointer text-gray-500 hover:text-gray-700 text-2xl" onClick={() => handleEdit(order)}/>
                       <MdDelete className="cursor-pointer text-gray-500 hover:text-red-500 text-2xl" />
                     </div>
                   </TableCell>

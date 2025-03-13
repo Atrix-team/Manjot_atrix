@@ -3,7 +3,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
-import AppDash from './Dashboard/AppDashboard.js';
+// import AppDash from './Dashboard/AppDashboard.js';
 import { ThemeProvider } from './Dashboard/context/ThemeContext.js';
 import { AppWrapper } from './Dashboard/components/common/PageMeta.js';
 
@@ -12,11 +12,11 @@ import { AppWrapper } from './Dashboard/components/common/PageMeta.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
 
     <ThemeProvider>
       <AppWrapper>
-        <AppDash />
+      <App />
+
       </AppWrapper>
     </ThemeProvider>
   </StrictMode>,

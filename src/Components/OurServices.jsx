@@ -26,8 +26,8 @@ const services = [
     icon: Asset1,
     title: "Branding/graphic design",
     description:
-      "Did you know? 94% of first impressions are design-related! That’s why strong visuals are key to brand success. Graphic design isn’t just about looks - it’s about delivering your message effectively. At Apatrix IT Solutions, we bring your vision to life with top-notch designs tailored to your needs. Whether it’s branding, websites, infographics, or eBooks, our expert team creates visually captivating content that engages and inspires. Let’s design something impactful!",
-    button: ["BRANDING", "LOGO DESIGN", "PACKAGING", "PRODUCT DESIGN", "PRINT MEDIA", "ADVERTISEMENT","UI/UX"],
+      "Did you know? 94% of first impressions are design-related! That’s why strong visuals are key to brand success. Graphic design isn’t just about looks - it’s about delivering your message effectively. At Atrix IT Solutions, we bring your vision to life with top-notch designs tailored to your needs. Whether it’s branding, websites, infographics, or eBooks, our expert team creates visually captivating content that engages and inspires. Let’s design something impactful!",
+    button: ["BRANDING", "LOGO DESIGN", "PACKAGING", "PRODUCT DESIGN", "PRINT MEDIA", "ADVERTISEMENT","UI/UX","SOCIAL MEDIA DESIGN"],
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const services = [
     icon: Asset3,
     title: "Digital Marketing",
     description:
-      "At Apatrix IT Solutions, get your own digital marketing strategy built from scratch. Our expert team crafts tailored campaigns to drive traffic, engage customers, and convert leads into loyal clients. Whether it’s SEO, social media marketing, or content creation, we focus on delivering real, measurable results that help your brand stand out. Ready to take your business to the next level? Partner with us today and watch your online presence grow!",
+      "At Atrix IT Solutions, get your own digital marketing strategy built from scratch. Our expert team crafts tailored campaigns to drive traffic, engage customers, and convert leads into loyal clients. Whether it’s SEO, social media marketing, or content creation, we focus on delivering real, measurable results that help your brand stand out. Ready to take your business to the next level? Partner with us today and watch your online presence grow!",
     button: ["MARKETING", "STRATEGY", "SEO", "SMO", "DIGITAL ADS", "CONTENT CREATION"],
   },
   {
@@ -54,7 +54,7 @@ const services = [
     icon: Asset5,
     title: "Visual Effects",
     description:
-      "Looking to bring your ideas to life with stunning visual effects? At Apatrix IT Solutions, we specialize in creating eye-catching VFX that captivate and engage your audience. Whether it's for film, advertisements, or digital media, our expert team delivers cutting-edge effects that enhance your project and leave a lasting impact. Transform your vision into reality with Apatrix IT Solutions today and make your visuals unforgettable!",
+      "Looking to bring your ideas to life with stunning visual effects? At Atrix IT Solutions, we specialize in creating eye-catching VFX that captivate and engage your audience. Whether it's for film, advertisements, or digital media, our expert team delivers cutting-edge effects that enhance your project and leave a lasting impact. Transform your vision into reality with Atrix IT Solutions today and make your visuals unforgettable!  ",
     button: ["VFX", "SFX", "MOTION GRAPHICS", "EDITING", "COMPOSITION", "GRADING","3D"],
 
   },
@@ -64,7 +64,7 @@ const services = [
     icon: Asset4,
     title: "Photo/Videography",
     description:
-      "Your moments deserve the spotlight! At Apatrix IT Solutions, we specialize in photo and videography that showcases your vision in the most stunning way. From events and branding to creative projects, our team ensures every shot is perfect. With high-quality photography and dynamic videography, we make your ideas come to life. Ready to capture the perfect shot? Partner with Apatrix IT Solutions and let’s create something amazing together!",
+      "Your moments deserve the spotlight! At Atrix IT Solutions, we specialize in photo and videography that showcases your vision in the most stunning way. From events and branding to creative projects, our team ensures every shot is perfect. With high-quality photography and dynamic videography, we make your ideas come to life. Ready to capture the perfect shot? Partner with Atrix IT Solutions and let’s create something amazing together!",
     button: ["CORPORATE SHOOT", "PRODUCT SHOOT","FOOD PHOTOGRAPHY","COMMERCIAL SHOOT "],
   },
   {
@@ -83,8 +83,8 @@ const services = [
     icon: Asset7,
     title: "Logistics ",
     description:
-      "As an agency our UI/UX teams focus on creating, visually appealing and user-friendly interfaces that significantly enhance engagement and user satisfaction. By focusing on intuitive design elements, we help create seamless experiences that keep users engaged.",
-    button: ["OTR", "Drayage", "jctrans"],
+      "Atrix is a modern logistics firm dedicated to providing our clients throughout the world with outstanding service and cutting-edge solutions. Having worked in the transportation and logistics industry for five years, we have made a name for ourselves as a reliable partner. Road freight is in our extensive service offering, which enables us to satisfy the varied demands of companies in a number of sectors.",
+    button: ["OTR", "DRAYAGE", "JCTRANS"],
 
   },
 ];

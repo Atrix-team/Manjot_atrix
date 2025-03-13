@@ -34,7 +34,7 @@ const navItems: NavItem[] = [
   {
     icon: <MdOutlineDashboard />, // Calendar icon
     name: "Dashboard",
-    path: "/DashboardHome",
+    path: "/Dashboard",
   },
 
   {
@@ -42,8 +42,8 @@ const navItems: NavItem[] = [
     icon: <GrTechnology />, // List icon
     subItems: [
       { name: "All Technology", path: "/Technology", pro: false },
-      { name: "Category", path: "/CategoryTechnology", pro: false },
       { name: "Add New Technology ", path: "/AddNewTechnology", pro: false },
+      { name: "Category", path: "/CategoryTechnology", pro: false },
 
 
     ],

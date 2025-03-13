@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "/White.svg"
+import Logo from "../assets/white_ais-logo-2.png"
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, useLocation } from "react-router-dom"
@@ -7,7 +7,7 @@ import Button from './Button';
 
 const navigation = [
   { name: 'Home', path: '/', current: true },
-  { name: 'About Us', path: '#', current: false },
+  { name: 'About Us', path: '/about', current: false },
   { name: 'Our Services', path: '#', current: false },
   { name: 'Portfolio', path: '#', current: false },
   { name: 'Blog', path: '#', current: false },
@@ -18,15 +18,15 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <Disclosure as="nav" className="absolute top-0 left-0 w-full z-10">
-      <div className="mx-auto px-5 sm:px-6 lg:px-8">
+    <Disclosure as="nav" className="absolute top-0 left-0 w-full z-10 ">
+      <div className="mx-auto px-5 sm:px-6 lg:px-8 py-2">
         <div className="relative flex h-32 items-center justify-between">
           <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <img
                 alt="Your Company"
                 src={Logo}
-                className="w-auto h-16 md:h-16"
+                className="w-auto h-16 md:h-32"
               />
             </div>
           </div>

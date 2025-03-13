@@ -14,6 +14,7 @@ const OurSolution = React.lazy(() => import('../Components/OurSolution'));
 const OurPortfolio = React.lazy(() => import('../Components/OurPortfolio'));
 const Technology = React.lazy(() => import('../Components/Technology'));
 const LetterMarquee = React.lazy(() => import('../Components/marqueelogo/letterMarquee'));
+import video from "../assets/atrix office shoot comressed.mp4"
 
 
 const Home = () => {
@@ -181,6 +182,15 @@ const Home = () => {
           <div className="lg:flex items-center ">
             <div className='inline-block relative max-w-[100%]'>
               <img src={AboutImage} className="h-full  w-auto min-h-[600px] object-cover relative max-w-[100%]" alt="About Us" />
+              {/* <video
+                      src={video}
+                      autoPlay 
+                      muted 
+                      loop 
+                      controls={false} 
+                      style={{ width: "100%", height: "auto" }} 
+                     className=" w-auto  object-cover relative max-w-[100%]"
+                    /> */}
             </div>
             <div className="text-(--white) lg:-ml-16  relative w-full lg:max-w-[40%] px-5 ">
               <p className="text-xl sm:text-md font-semibold text-(--gray) mb-2">Our Vision</p>

@@ -1,11 +1,14 @@
 import React from 'react'
-import ParticleEffect from '../Components/ParticleEffect'
+// import ParticleEffect from '../Components/ParticleEffect'
 
 const About = () => {
   return (
     <div>
-      <ParticleEffect />
+      <h1 className='text-9xl'>About Us</h1>
+      {/* <ParticleEffect /> */}
     </div>
+
+    
   )
 }
 
