@@ -7,7 +7,7 @@ import Button from './Button';
 
 const navigation = [
   { name: 'Home', path: '/', current: true },
-  { name: 'About Us', path: '/about', current: false },
+  { name: 'About Us', path: '/AboutUs', current: false },
   { name: 'Our Services', path: '#', current: false },
   { name: 'Portfolio', path: '#', current: false },
   { name: 'Blog', path: '#', current: false },
