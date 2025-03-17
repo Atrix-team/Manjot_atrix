@@ -7,6 +7,12 @@ import img5 from "../../assets/AboutUs/imgpsh_fullsize_anim5.png";
 import img6 from "../../assets/AboutUs/imgpsh_fullsize_anim3.png";
 import OurSolution from "../../Components/OurSolution";
 import OurPortfolio from "../../Components/OurPortfolio";
+import Marquee from "react-fast-marquee";
+import icon1 from "../../assets/AboutUs/Transparency.svg"
+import icon2 from "../../assets/AboutUs/growth-support.svg"
+import icon3 from "../../assets/AboutUs/Good-Culture.svg"
+import icon4 from "../../assets/AboutUs/5day-working.svg"
+import Button from "../../Components/Button";
 
 
 const AboutUs = () => {
@@ -67,18 +73,14 @@ const AboutUs = () => {
                   accusantium expedita ducimus. Unde voluptates est deserunt
                   nulla dicta. Quis fugit deserunt hic. Odit, officia. Labore
                   accusamus voluptas consequatur itaque sint, temporibus quis
-                  saepe aspernatur cumque! Eos inventore numquam assumenda!
-                  Rerum enim vitae magni perspiciatis laborum, alias amet
-                  doloremque? Illum iusto pariatur sunt sequi, architecto veniam
-                  corrupti reiciendis? Natus, ipsum iste asperiores qui, facere,
-                  quasi velit commodi aspernatur sit doloribus praesentium
-                  dolorum laudantium tempora sint? Commodi voluptatum quasi
-                  dolore!
+              
                 </p>
             </div>
           </div>
         </div>
- 
+
+
+
 
         <div className="container mx-auto mt-32 max-w-[1600px] w-[80%]  ">
           <div className="row  flex-col grid grid-cols-12 space-x-22 ">
@@ -134,13 +136,28 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="container mx-auto mt-42 max-w-[1600px] w-[80%]">
-          <div className="row  mt-12 flex-col grid grid-cols-12 space-x-96 ">
-            <div className="col-span-12 text-center relative z-10 mt-12  ">
-              <h2>Our Services</h2>
-            </div>
-          </div>
 
+  <div className=" marquee-sec text-6xl font-bold mt-32">
+        <div>
+          <Marquee speed={30} className='overflow-hidden'>
+            VISIONARY . INNOVATIVE . EFFICIENT . GL ROFESSIONAL . ACCESSIBLE . USER-CENTR EMPOWERING . TRUSTWORTHY . SCALABLE
+          </Marquee>
+        </div>
+        <div >
+          <Marquee speed={30} direction="right" className=' overflow-hidden'>
+            VISIONARY . INNOVATIVE . EFFICIENT . GL ROFESSIONAL . ACCESSIBLE . USER-CENTR EMPOWERING . TRUSTWORTHY . SCALABLE
+          </Marquee>
+        </div>
+        <div>
+          <Marquee speed={30} className=' overflow-hidden'>
+            ACCESSIBLE . USER-CENTR EMPOWERING . TRUSTWORTHY . SCALABLE . VISIONARY . INNOVATIVE . EFFICIENT . GL ROFESSIONAL .
+          </Marquee>
+        </div>
+      </div>
+
+
+
+        <div className="container mx-auto mt-28 max-w-[1600px] w-[80%]">
           <div className="row  flex-col grid grid-cols-12 space-x-96  ">
             <div className=" Our Solution Process col-span-12 ">
               <OurSolution />
@@ -148,14 +165,61 @@ const AboutUs = () => {
           </div>
         </div>
 
-       <div className="portfolio-sec-heading text-center relative z-10 mt-42 ">
-        <h2>Explore Our Work</h2>
-       </div>
+       
       <div className="Our Solution Process  ">
         <OurPortfolio />
       </div>
 
-      <div className="marquee">
+      <div className="Environment-sec">
+
+        <div className="container mx-auto mt-28 max-w-[1600px] w-[80%] ">
+
+          <div className="row"> 
+            <div className="col">
+              <p  >Visiontrek Environment</p>
+              <h2>What let us thrive together</h2>
+            </div>
+          </div>
+
+          <div className="row flex-col grid grid-cols-12 mt-10 ">
+
+            <div className="col-span-3 flex items-center flex-col ">
+              <div className="image w-20">
+                 <img src={icon1} alt="" />
+              </div>
+              <p className="mt-2" >Transparency</p>
+            </div>
+            <div className="col-span-3 flex items-center flex-col  ">
+              <div className="image w-20">
+                 <img src={icon2} alt="" />
+              </div>
+              <p className="mt-2" >Transparency</p>
+            </div>
+            <div className="col-span-3 flex items-center flex-col  ">
+              <div className="image w-20">
+                 <img src={icon3} alt="" />
+              </div>
+              <p className="mt-2" >Transparency</p>
+            </div>
+            <div className="col-span-3 flex items-center flex-col  ">
+              <div className="image w-20">
+                 <img src={icon4} alt="" />
+              </div>
+              <p className="mt-2" >Transparency</p>
+            </div>
+         
+          </div>
+          <div className="row flex-col grid grid-cols-12 mt-10 bg-(--black)  p-10">
+            <div className="col-span-10">
+              <h3 className="text-white text-3xl " >We are always on the lookout for new talent!</h3>
+            </div>
+            <div className="col-span-2 text-black">
+              <Button mybtn={"FDVDFjhvh"}  > </Button>
+            </div>
+          </div>
+
+
+        </div>
     
       </div>
 
