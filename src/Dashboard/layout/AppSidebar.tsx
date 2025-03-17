@@ -15,8 +15,8 @@ import { BsBox } from "react-icons/bs";
 import { RiSettings3Line } from "react-icons/ri";
 import { FaChevronDown } from "react-icons/fa6";
 import { GrTechnology } from "react-icons/gr";
-import Logo from "./Image/MainLogo.svg";
-import favIcons from "../../assets/favIcon.svg";
+import Logo from "../../assets/ais-logo-3.png";
+import favIcons from "/favicon_ais-logo-2.png";
 type NavItem = {
   name: string;
   icon: React.ReactNode;
@@ -311,26 +311,26 @@ const AppSidebar: React.FC = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`py-8  flex justify-center ${
+        className={`py-5  flex justify-center ${
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
         }`}
       >
         <Link to="/">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
-            <div className=" px-10">
+            <div className=" px-16">
               <img
                 className="dark:hidden"
                 src={Logo}
                 alt="Logo"
-                width={150}
+                width={120}
                 height={40}
               />
               <img
                 className="hidden dark:block"
                 src={Logo}
                 alt="Logo"
-                width={150}
+                width={120}
                 height={40}
               />
               </div>

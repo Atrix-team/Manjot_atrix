@@ -175,9 +175,9 @@ const Home = () => {
 
 
       <LogoSlider className="max-w-full" />
-      <div className="bg-(--darkblack) py-10  container mx-auto ">
+      <div className=" py-10  container mx-auto ">
 
-        <div className="bg-(--darkblack) ">
+        <div className=" ">
           <h1 className="font-bold flex justify-center lg:right-60 top-14 relative text-8xl md:text-9xl text-transparent z-10" style={{ WebkitTextStroke: "1px white" }}>About us</h1>
           <div className="lg:flex items-center ">
             <div className='inline-block relative max-w-[100%]'>

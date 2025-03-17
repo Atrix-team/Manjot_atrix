@@ -321,7 +321,27 @@ h1,h2,h3,h4,h5{
   background-color: var(--blue);
 }
 
-
+body {
+  background-image: url(/bgImage.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+}
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: .7;
+  pointer-events: none;
+  z-index: -1;
+}
 /* .hometext{
   font-size: 150px;
 } */
