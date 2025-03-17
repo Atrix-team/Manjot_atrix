@@ -1,13 +1,14 @@
 import React from 'react'
-import hero1 from '../assets/AboutUs/imgpsh_fullsize_anim.png'
-import hero2 from '../assets/AboutUs/imgpsh_fullsize_anim (1).png'
-import hero3 from '../assets/AboutUs/imgpsh_fullsize_anim (2).png'
-import hero4 from '../assets/AboutUs/imgpsh_fullsize_anim (3).png'
-import hero5 from '../assets/AboutUs/imgpsh_fullsize_anim (4).png'
-import hero6 from '../assets/AboutUs/imgpsh_fullsize_anim (5).png'
+import hero1 from '../assets/AboutUs/imgpsh_fullsize_ani.png'
+import hero2 from '../assets/AboutUs/imgpsh_fullsize_anim1.png'
+import hero3 from '../assets/AboutUs/imgpsh_fullsize_anim2.png'
+import hero4 from '../assets/AboutUs/imgpsh_fullsize_anim3.png'
+import hero5 from '../assets/AboutUs/imgpsh_fullsize_anim4.png'
+import hero6 from '../assets/AboutUs/imgpsh_fullsize_anim5.png'
 import OurSolution from '../Components/OurSolution'
 import OurPortfolio from '../Components/OurPortfolio'
 import Marquee from "react-fast-marquee";
+import AboutSec from '../Components/AboutUs/AboutSec'
 
 
 const aboutData = [
@@ -62,14 +63,25 @@ const About = () => {
         <p className="text-center max-w-[1000px] mx-auto" > Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio delectus quod laudantium temporibus reprehenderit. Modi fuga eaque enim distinctio sequi aspernatur, ? Facilis aut pariatur accusantium, perferendis illum fuga hic. </p>
       </div>
 
-      <div className=" text-6xl font-bold">
+
+
+      <div className="container mx-auto py-16">
+        {aboutData.map((item, index) => (
+          <div className="row grid grid-cols-12 py-8">
+            <div className='col-span-6 font-semibold ' > <h2>{item.title}</h2> </div>
+            <div className='col-span-6'  > <p>{item.desc}</p> </div>
+
+          </div>
+        ))}
+      </div>
+      <div className=" text-6xl font-bold relative  ">
         <div>
           <Marquee className='overflow-hidden'>
             VISIONARY . INNOVATIVE . EFFICIENT . GL ROFESSIONAL . ACCESSIBLE . USER-CENTR EMPOWERING . TRUSTWORTHY . SCALABLE
           </Marquee>
         </div>
-        <div >
-          <Marquee direction="right" className=' overflow-hidden'>
+        <div className='py-2' >
+          <Marquee direction="right" speed={30} className=' overflow-hidden'>
             VISIONARY . INNOVATIVE . EFFICIENT . GL ROFESSIONAL . ACCESSIBLE . USER-CENTR EMPOWERING . TRUSTWORTHY . SCALABLE
           </Marquee>
         </div>
@@ -79,16 +91,7 @@ const About = () => {
           </Marquee>
         </div>
       </div>
-
-      <div className="container mx-auto py-16">
-        {aboutData.map((item, index) => (
-          <div className="row grid grid-cols-12 py-8">
-            <div className='col-span-6 ' > <h2>{item.title}</h2> </div>
-            <div className='col-span-6'  > <p>{item.desc}</p> </div>
-
-          </div>
-        ))}
-      </div>
+      <AboutSec></AboutSec>
       <OurSolution></OurSolution>
       <OurPortfolio></OurPortfolio>
 
